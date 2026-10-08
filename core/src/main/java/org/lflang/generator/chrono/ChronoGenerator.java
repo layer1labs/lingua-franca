@@ -429,6 +429,12 @@ public class ChronoGenerator extends GeneratorBase {
       if (c.getDelay() != null) {
         throw subset("connection delays (after) are not supported (reactor " + name + ")");
       }
+      if (c.getSerializer() != null) {
+        throw subset("connection serializers are not supported (reactor " + name + ")");
+      }
+      if (c.isIterated()) {
+        throw subset("iterated (bank) connections are not supported (reactor " + name + ")");
+      }
       if (c.getLeftPorts().size() != c.getRightPorts().size()) {
         throw subset("connections with mismatched port counts are not supported (reactor " + name + ")");
       }

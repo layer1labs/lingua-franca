@@ -48,11 +48,10 @@ def load_reader(src_dir: Path, csf_magic: bool, tag: str):
     sys.path.insert(0, str(tmp))
     for mod in ("chronohive.blob", "chronohive.runtime", "chronohive"):
         sys.modules.pop(mod, None)
-    spec = importlib.util.find_spec("chronohive.blob")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    sys.path.pop(0)
-    return module
+    try:
+        return importlib.import_module("chronohive.blob")
+    finally:
+        sys.path.pop(0)
 
 
 def fail(msg):

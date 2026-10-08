@@ -26,7 +26,8 @@ WORK="$PROOF_DIR/work"
 WT="${CHRONOHIVE_WT:-$HOME/workspace/chronohive-wt-target}"
 LFC="$REPO_ROOT/build/install/lf-cli/bin/lfc"
 
-export JAVA_HOME="${JAVA_HOME:-$HOME/workspace/tools/jdk-21.0.12.1+1-jre}"
+export JAVA_HOME="${JAVA_HOME:-$HOME/workspace/tools/jdk-21-full}"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$JAVA_HOME/bin:$PATH"
 
 [ -x "$LFC" ] || { echo "lfc not built: run ./gradlew assemble:cli:lfc:assemble first" >&2; exit 1; }

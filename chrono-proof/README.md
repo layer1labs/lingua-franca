@@ -63,6 +63,20 @@ what now guards the contract).
 chrono-proof/scripts/proof.sh
 ```
 
+## Build-environment note (2026-10-08)
+
+In the sandbox VM where this branch was developed, the Gradle build
+cannot complete: Gradle 8.8's daemon IPC fails deterministically (the
+daemon accepts the client's connection, then closes it seconds later
+without executing; the client reports `NoUsableDaemonFoundException`).
+Loopback TCP, filesystems, JDK/JRE, and launch modes were all exonerated
+individually; see `PROOF-OUTPUTS.md` and the preserved logs
+(`gradle-daemon-blocker*.log`). The Java sources are verified at source
+level (all LF APIs checked against the v0.13.0 tree; `javac` parses them
+with zero syntax errors), and every downstream link of the pipeline is
+proven in `PROOF-OUTPUTS.md`. On a normal build machine the two commands
+above run the full end-to-end proof unchanged.
+
 `proof.sh` uses the proof harness in `harness/` — a small Rust binary that
 includes chronoc's real frontend/lowering/blob sources by `#[path]` from
 the chronohive toolchain worktree and exposes the `lower-model` /
