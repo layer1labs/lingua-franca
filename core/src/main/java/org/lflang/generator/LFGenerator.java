@@ -18,6 +18,7 @@ import org.lflang.federated.generator.FedGenerator;
 import org.lflang.federated.generator.FederationFileConfig;
 import org.lflang.generator.c.CFileConfig;
 import org.lflang.generator.c.CGenerator;
+import org.lflang.generator.chrono.ChronoGenerator;
 import org.lflang.generator.cpp.CppFileConfig;
 import org.lflang.generator.cpp.CppGenerator;
 import org.lflang.generator.python.PyFileConfig;
@@ -65,6 +66,7 @@ public class LFGenerator extends AbstractGenerator {
         case CPP -> new CppFileConfig(resource, srcGenBasePath, useHierarchicalBin);
         case Rust -> new RustFileConfig(resource, srcGenBasePath, useHierarchicalBin);
         case TS -> new TSFileConfig(resource, srcGenBasePath, useHierarchicalBin);
+        case Chrono -> new FileConfig(resource, srcGenBasePath, useHierarchicalBin);
         case UC ->
             throw new RuntimeException(
                 "Please refer to https://github.com/lf-lang/reactor-uc for code-generation for"
@@ -94,6 +96,7 @@ public class LFGenerator extends AbstractGenerator {
       case CPP -> new CppGenerator(context, scopeProvider);
       case TS -> new TSGenerator(context);
       case Rust -> new RustGenerator(context, scopeProvider);
+      case Chrono -> new ChronoGenerator(context);
       case UC ->
           throw new RuntimeException(
               "Please refer to https://github.com/lf-lang/reactor-uc for code-generation for"
