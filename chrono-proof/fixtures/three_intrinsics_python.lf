@@ -1,0 +1,43 @@
+// Golden fixture for the byte-identical regression test
+// (spec 002, REQ-112): covers all three default-manifest intrinsics
+// (train_step, admit_checkpoint, prefetch) through one driver loop.
+target Python
+
+reactor Trainer(steps=6, ckpt_every=3) {
+    output step_done
+    output ckpt_request
+    state step = 0
+    timer tick(0, 1 ms)
+
+    reaction(tick) -> step_done, ckpt_request {=
+        train_step()
+        step = step + 1
+        step_done.set({"step": step})
+        if step % ckpt_every == 0:
+            ckpt_request.set({"step": step})
+        if step >= steps:
+            request_stop()
+    =}
+}
+
+reactor CheckpointIO(mb=8) {
+    input ckpt
+    reaction(ckpt) {=
+        admit_checkpoint(mb=mb)
+    =}
+}
+
+reactor PrefetchIO(depth=4) {
+    input tick
+    reaction(tick) {=
+        prefetch(depth=depth)
+    =}
+}
+
+main reactor Top(steps=6, ckpt_every=3, ckpt_mb=8, prefetch_depth=4) {
+    t = new Trainer(steps=steps, ckpt_every=ckpt_every)
+    c = new CheckpointIO(mb=ckpt_mb)
+    p = new PrefetchIO(depth=prefetch_depth)
+    t.ckpt_request -> c.ckpt
+    t.step_done -> p.tick
+}
