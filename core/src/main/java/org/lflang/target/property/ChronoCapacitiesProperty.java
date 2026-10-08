@@ -11,12 +11,11 @@ package org.lflang.target.property;
  * }
  * }</pre>
  *
- * <p>Capacities declare the finite resources the blob's admission control accounts against.
- * Every resource named by an operation demand must be declared here, or compilation fails with a
- * precise error (mirroring chronoc's {@code --capacity} flags). LF's target-property machinery
- * has no arbitrary-key integer dictionary type, so the pairs are carried as one string and parsed
- * (and validated) by the ChronoGenerator; that encoding is the documented limitation of this
- * property.
+ * <p>Capacities declare the finite resources the blob's admission control accounts against. Every
+ * resource named by an operation demand must be declared here, or compilation fails with a precise
+ * error (mirroring chronoc's {@code --capacity} flags). LF's target-property machinery has no
+ * arbitrary-key integer dictionary type, so the pairs are carried as one string and parsed (and
+ * validated) by the ChronoGenerator; that encoding is the documented limitation of this property.
  */
 public final class ChronoCapacitiesProperty extends StringProperty {
 

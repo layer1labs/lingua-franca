@@ -51,20 +51,20 @@ import org.lflang.util.FileUtil;
  * <ol>
  *   <li>extract the compiled program from the <b>real LF AST</b> ({@code org.lflang.lf}) — the
  *       reactor-instance graph is also built (via {@code GeneratorBase} and {@code
- *       ASTUtils.createMainReactorInstance}) as the compiler's own structural gate — into
- *       chronoc's <b>canonical model</b> ({@code chrono-model} JSON, schema below);
+ *       ASTUtils.createMainReactorInstance}) as the compiler's own structural gate — into chronoc's
+ *       <b>canonical model</b> ({@code chrono-model} JSON, schema below);
  *   <li>validate the ChronoHive LF subset v1 (spec 002, REQ-102) against that AST, rejecting
  *       anything outside it with a precise error — this class is the gatekeeper before lowering;
- *   <li>invoke the Rust backend: {@code chronoc lower-model <model.json> -o <name>.csf
- *       --emit-ir <name>.csf-ir.json}.
+ *   <li>invoke the Rust backend: {@code chronoc lower-model <model.json> -o <name>.csf --emit-ir
+ *       <name>.csf-ir.json}.
  * </ol>
  *
- * <p>The artifact produced by the backend is a deterministic binary in the Constraint
- * Specification Format ({@code .csf}, magic {@code CSF1}): the operations, capacities, unrolled
- * schedule, dependencies, bindings, and provenance an engine needs (spec 002, REQ-103..106,
- * REQ-113). The generator does not build an engine. The same artifact runs on the ChronoHive
- * engine (software effector binding) and the ChronoFabric engine (hardware effector binding);
- * engines differ only in effector binding.
+ * <p>The artifact produced by the backend is a deterministic binary in the Constraint Specification
+ * Format ({@code .csf}, magic {@code CSF1}): the operations, capacities, unrolled schedule,
+ * dependencies, bindings, and provenance an engine needs (spec 002, REQ-103..106, REQ-113). The
+ * generator does not build an engine. The same artifact runs on the ChronoHive engine (software
+ * effector binding) and the ChronoFabric engine (hardware effector binding); engines differ only in
+ * effector binding.
  *
  * <p>Locating chronoc: the {@code chrono.chronoc} system property, else the {@code CHRONOC}
  * environment variable, else {@code chronoc} on the {@code PATH}. If no backend is found, the
@@ -77,9 +77,9 @@ import org.lflang.util.FileUtil;
  *   <li>{@code capacities: "storage_bw=1000"} — declared resource capacities (REQ-105), carried
  *       into the model's config section; the Rust lowering validates demands against them.
  *   <li>{@code binding-profile: hive | fabric} — compile-time validation only: the Rust lowering
- *       checks (through its effector manifest) that every effector the program needs exists in
- *       the named profile. The profile changes nothing in the emitted artifact and is recorded
- *       nowhere in it; the artifact stays engine-neutral ({@code lf_target = "Chrono"}).
+ *       checks (through its effector manifest) that every effector the program needs exists in the
+ *       named profile. The profile changes nothing in the emitted artifact and is recorded nowhere
+ *       in it; the artifact stays engine-neutral ({@code lf_target = "Chrono"}).
  * </ul>
  *
  * <p>Canonical model schema ({@code chrono-model}, version 1) — the complete input of the Rust
@@ -269,13 +269,18 @@ public class ChronoGenerator extends GeneratorBase {
     b.append("  \"version\": 1,\n");
     b.append("  \"target\": \"Chrono\",\n");
     b.append("  \"source_text\": ").append(ChronoModelJson.str(sourceText)).append(",\n");
-    b.append("  \"lfc_version\": ").append(ChronoModelJson.str("lfc " + LocalStrings.VERSION)).append(",\n");
+    b.append("  \"lfc_version\": ")
+        .append(ChronoModelJson.str("lfc " + LocalStrings.VERSION))
+        .append(",\n");
     b.append("  \"chronoc_version\": ").append(ChronoModelJson.str(CHRONOC_VERSION)).append(",\n");
     b.append("  \"binding_profile\": ").append(ChronoModelJson.str(profile)).append(",\n");
     b.append("  \"config\": {\"params\": [], \"capacities\": ")
         .append(ChronoModelJson.pairs(capacities))
-        .append(", \"mb_bw\": ").append(MB_BW)
-        .append(", \"depth_bw\": ").append(DEPTH_BW).append("},\n");
+        .append(", \"mb_bw\": ")
+        .append(MB_BW)
+        .append(", \"depth_bw\": ")
+        .append(DEPTH_BW)
+        .append("},\n");
     b.append("  \"reactors\": [");
     boolean first = true;
     for (Reactor reactor : reactors) {
@@ -436,7 +441,8 @@ public class ChronoGenerator extends GeneratorBase {
         throw subset("iterated (bank) connections are not supported (reactor " + name + ")");
       }
       if (c.getLeftPorts().size() != c.getRightPorts().size()) {
-        throw subset("connections with mismatched port counts are not supported (reactor " + name + ")");
+        throw subset(
+            "connections with mismatched port counts are not supported (reactor " + name + ")");
       }
       for (int i = 0; i < c.getLeftPorts().size(); i++) {
         if (!first) b.append(", ");
@@ -444,10 +450,14 @@ public class ChronoGenerator extends GeneratorBase {
         VarRef src = c.getLeftPorts().get(i);
         VarRef dst = c.getRightPorts().get(i);
         b.append("{\"src_inst\": ")
-            .append(ChronoModelJson.str(src.getContainer() == null ? "" : src.getContainer().getName()));
+            .append(
+                ChronoModelJson.str(
+                    src.getContainer() == null ? "" : src.getContainer().getName()));
         b.append(", \"src_port\": ").append(ChronoModelJson.str(portNameOf(src, name)));
         b.append(", \"dst_inst\": ")
-            .append(ChronoModelJson.str(dst.getContainer() == null ? "" : dst.getContainer().getName()));
+            .append(
+                ChronoModelJson.str(
+                    dst.getContainer() == null ? "" : dst.getContainer().getName()));
         b.append(", \"dst_port\": ").append(ChronoModelJson.str(portNameOf(dst, name)));
         b.append("}");
       }
@@ -476,15 +486,18 @@ public class ChronoGenerator extends GeneratorBase {
       throw subset("mutations are not supported (reactor " + reactorName + ")");
     }
     if (r.getDeadline() != null || r.getStp() != null || r.getTardy() != null) {
-      throw subset("reaction deadlines/STP/tardy handlers are not supported (reactor " + reactorName + ")");
+      throw subset(
+          "reaction deadlines/STP/tardy handlers are not supported (reactor " + reactorName + ")");
     }
     if (r.getCode() == null) {
-      throw subset("reactions without an inlined body are not supported (reactor " + reactorName + ")");
+      throw subset(
+          "reactions without an inlined body are not supported (reactor " + reactorName + ")");
     }
     List<String> triggers = new ArrayList<>();
     for (TriggerRef tr : r.getTriggers()) {
       if (tr instanceof BuiltinTriggerRef) {
-        throw subset("builtin triggers (startup/shutdown) are not supported (reactor " + reactorName + ")");
+        throw subset(
+            "builtin triggers (startup/shutdown) are not supported (reactor " + reactorName + ")");
       }
       triggers.add(((VarRef) tr).getVariable().getName());
     }
@@ -493,7 +506,8 @@ public class ChronoGenerator extends GeneratorBase {
       if (e instanceof VarRef vr) {
         effects.add(vr.getVariable().getName());
       } else {
-        throw subset("mode transitions as reaction effects are not supported (reactor " + reactorName + ")");
+        throw subset(
+            "mode transitions as reaction effects are not supported (reactor " + reactorName + ")");
       }
     }
     var node = NodeModelUtils.findActualNodeFor(r);
@@ -513,7 +527,8 @@ public class ChronoGenerator extends GeneratorBase {
   private long paramDefault(Parameter p, String reactorName) throws SubsetException {
     Initializer init = p.getInit();
     if (init != null && init.getExpr() != null) {
-      return intLiteral(init.getExpr(), "parameter \"" + p.getName() + "\" of reactor " + reactorName);
+      return intLiteral(
+          init.getExpr(), "parameter \"" + p.getName() + "\" of reactor " + reactorName);
     }
     // Typed form with the default inside the type's code, e.g. `x: int(10)`.
     if (p.getType() != null && p.getType().getCode() != null) {
@@ -546,7 +561,8 @@ public class ChronoGenerator extends GeneratorBase {
               + reactorName
               + " has no integer initializer (subset v1 requires one)");
     }
-    return intLiteral(init.getExpr(), "state variable \"" + s.getName() + "\" of reactor " + reactorName);
+    return intLiteral(
+        init.getExpr(), "state variable \"" + s.getName() + "\" of reactor " + reactorName);
   }
 
   private long intLiteral(Expression expr, String what) throws SubsetException {
@@ -571,7 +587,9 @@ public class ChronoGenerator extends GeneratorBase {
   private String argValue(Initializer rhs, String reactorName) throws SubsetException {
     Expression expr = rhs != null ? rhs.getExpr() : null;
     if (expr instanceof Literal) {
-      return "{\"int\": " + intLiteral(expr, "instantiation argument in reactor " + reactorName) + "}";
+      return "{\"int\": "
+          + intLiteral(expr, "instantiation argument in reactor " + reactorName)
+          + "}";
     }
     if (expr instanceof ParameterReference pr) {
       return "{\"ref\": " + ChronoModelJson.str(pr.getParameter().getName()) + "}";

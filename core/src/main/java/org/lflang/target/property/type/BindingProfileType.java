@@ -5,11 +5,11 @@ import org.lflang.target.property.type.BindingProfileType.BindingProfile;
 /**
  * The set of effector binding profiles a Chrono program can be validated against at compile time.
  *
- * <p>A binding profile is <em>not</em> a target and not a language dialect: the Chrono target
- * emits the same engine-neutral CHB1 blob regardless of profile. The profile only names the
- * effector manifest the generator validates the program against (every effector the program
- * needs must exist in the profile, and capacities must be sane for it). Nothing profile-specific
- * is recorded in the blob.
+ * <p>A binding profile is <em>not</em> a target and not a language dialect: the Chrono target emits
+ * the same engine-neutral CHB1 blob regardless of profile. The profile only names the effector
+ * manifest the generator validates the program against (every effector the program needs must exist
+ * in the profile, and capacities must be sane for it). Nothing profile-specific is recorded in the
+ * blob.
  */
 public class BindingProfileType extends OptionsType<BindingProfile> {
 

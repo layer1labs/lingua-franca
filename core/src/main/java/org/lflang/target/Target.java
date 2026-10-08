@@ -338,12 +338,12 @@ public enum Target {
   UC("uC", true, Target.C.keywords),
   /**
    * The Chrono target (Layer1Labs ChronoHive / ChronoFabric). There is exactly one Chrono target:
-   * programs are lowered by the ChronoGenerator to a deterministic Constraint Specification Format (CSF) binary artifact (a single
-   * deployment artifact, .csf) that is executed by the ChronoHive engine (software effector binding) or
-   * the ChronoFabric engine (hardware effector binding). The engines differ only in effector
-   * binding, never in language or blob semantics, so there are no per-engine target variants.
-   * Reaction bodies are written in the Python-syntax ChronoHive subset (spec 002, REQ-102/103),
-   * hence this target reuses Python's keyword set.
+   * programs are lowered by the ChronoGenerator to a deterministic Constraint Specification Format
+   * (CSF) binary artifact (a single deployment artifact, .csf) that is executed by the ChronoHive
+   * engine (software effector binding) or the ChronoFabric engine (hardware effector binding). The
+   * engines differ only in effector binding, never in language or blob semantics, so there are no
+   * per-engine target variants. Reaction bodies are written in the Python-syntax ChronoHive subset
+   * (spec 002, REQ-102/103), hence this target reuses Python's keyword set.
    */
   Chrono("Chrono", false, Target.Python.keywords),
   /**
@@ -392,18 +392,17 @@ public enum Target {
 
   /**
    * Return the display name of the target, as it should be written in LF code. This is hence a
-   * single identifier. Eg for {@link #CPP} returns `"Cpp"`, for {@link #Python} returns
-   * `"Python"`. Avoid using either `name()` or `toString()`, which have
-   * unrelated contracts.
+   * single identifier. Eg for {@link #CPP} returns `"Cpp"`, for {@link #Python} returns `"Python"`.
+   * Avoid using either `name()` or `toString()`, which have unrelated contracts.
    */
   public String getDisplayName() {
     return displayName;
   }
 
   /**
-   * Return the conventional directory name for this target. This is used to divide e.g. the
-   * `test` and `example` directories by target language. For instance, `test/Cpp` is the
-   * path of {@link #CPP}'s test directory, and this method returns `"Cpp"`.
+   * Return the conventional directory name for this target. This is used to divide e.g. the `test`
+   * and `example` directories by target language. For instance, `test/Cpp` is the path of {@link
+   * #CPP}'s test directory, and this method returns `"Cpp"`.
    */
   public String getDirectoryName() {
     return displayName;
@@ -557,7 +556,8 @@ public enum Target {
    * Return the target constant corresponding to given target declaration among. Return a non-null
    * result, will throw if invalid.
    *
-   * @throws RuntimeException If no target declaration ({@code TargetDecl}) is present or if it is invalid.
+   * @throws RuntimeException If no target declaration ({@code TargetDecl}) is present or if it is
+   *     invalid.
    */
   public static Target fromDecl(TargetDecl targetDecl) {
     String name = targetDecl.getName();

@@ -53,7 +53,11 @@ final class ChronoModelJson {
       if (i > 0) {
         b.append(", ");
       }
-      b.append("[").append(str(xs.get(i).getKey())).append(", ").append(xs.get(i).getValue()).append("]");
+      b.append("[")
+          .append(str(xs.get(i).getKey()))
+          .append(", ")
+          .append(xs.get(i).getValue())
+          .append("]");
     }
     return b.append("]").toString();
   }
