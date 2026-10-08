@@ -31,14 +31,6 @@ use std::process::ExitCode;
 // toolchain worktree. CHRONOC_SRC can point at another checkout of the same
 // sources; the default is the worktree that carries the REQ-113 lf_target
 // field and version 0.1.0-alpha.1.
-macro_rules! chronoc_src {
-    ($name:literal) => {
-        concat!(
-            "/home/hatch/workspace/chronohive-wt-target/toolchain/chronoc/src/",
-            $name
-        )
-    };
-}
 
 #[path = "/home/hatch/workspace/chronohive-wt-target/toolchain/chronoc/src/ast.rs"]
 mod ast;
@@ -183,7 +175,11 @@ fn model_to_program(model: &Value) -> Program {
 fn program_to_model(prog: &Program, source_text: &str) -> Value {
     let mut reactors = Vec::new();
     for r in &prog.reactors {
-        let mut params = Vec::new();
+        let params: Vec<Value> = r
+            .params
+            .iter()
+            .map(|p| json!({"name": p.name, "default": p.default}))
+            .collect();
         let mut states = Vec::new();
         let mut timers = Vec::new();
         let mut inputs = Vec::new();

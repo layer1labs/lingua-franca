@@ -580,11 +580,26 @@ public class ChronoGenerator extends GeneratorBase {
   private String timeVal(Expression expr, String reactorName, String timerName)
       throws SubsetException {
     if (expr == null) {
-      return "{\"amount\": 0, \"unit\": \"\"}";
+      throw subset(
+          "timer "
+              + timerName
+              + " of reactor "
+              + reactorName
+              + " must declare an explicit (offset, period) in subset v1");
     }
     if (expr instanceof Time time) {
+      if (time.isForever() || time.isNever()) {
+        throw subset(
+            "forever/never timers are not supported in subset v1 (timer "
+                + timerName
+                + " of reactor "
+                + reactorName
+                + ")");
+      }
       if (time.getUnit() == null) {
-        return "{\"amount\": " + time.getInterval() + ", \"unit\": \"\"}";
+        // A bare amount carries the subset's default unit (ms), mirroring
+        // chronoc's parser convention for unit-less time values.
+        return "{\"amount\": " + time.getInterval() + ", \"unit\": \"ms\"}";
       }
       String unit =
           switch (time.getUnit()) {
@@ -605,8 +620,10 @@ public class ChronoGenerator extends GeneratorBase {
       return "{\"amount\": " + time.getInterval() + ", \"unit\": \"" + unit + "\"}";
     }
     if (expr instanceof Literal) {
+      // Unit-less time value (e.g. the conventional `timer t(0, 1 ms)` zero
+      // offset): chronoc's parser defaults the unit to ms.
       long v = intLiteral(expr, "timer " + timerName + " of reactor " + reactorName);
-      return "{\"amount\": " + v + ", \"unit\": \"\"}";
+      return "{\"amount\": " + v + ", \"unit\": \"ms\"}";
     }
     throw subset(
         "timer "
