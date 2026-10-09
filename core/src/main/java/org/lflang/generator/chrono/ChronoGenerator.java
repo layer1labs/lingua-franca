@@ -534,8 +534,10 @@ public class ChronoGenerator extends GeneratorBase {
       return r.getCode().getBody();
     }
     String text = codeNode.getText();
-    if (text.startsWith("{=") && text.endsWith("=}")) {
-      text = text.substring(2, text.length() - 2);
+    int open = text.indexOf("{=");
+    int close = open < 0 ? -1 : text.indexOf("=}", open + 2);
+    if (open >= 0 && close > open) {
+      text = text.substring(open + 2, close);
     }
     return text;
   }
