@@ -23,13 +23,13 @@ itself, because LF targets are Java — so the Java side is **thin**:
   the class javadoc), and invokes the single Rust lowering implementation:
 
   ```
-  chronoc lower-model <model.json> -o <name>.csf --emit-ir <name>.csf-ir.json
+  chronoc lower-model <model.json> -o <name>.cspec --emit-ir <name>.cspec-ir.json
   ```
 
   (located via `-Dchrono.chronoc`, `$CHRONOC`, or `PATH`).
 
 There is exactly **one** Chrono target. The artifact (Constraint
-Specification Format, `.csf`, magic `CSF1`) is engine-neutral:
+Specification Format, `.cspec`, magic `CSP1`) is engine-neutral:
 `binding-profile` is a compile-time validation knob only and is recorded
 nowhere in the artifact.
 
@@ -49,7 +49,7 @@ what now guards the contract).
 3. The **differentials** in `scripts/`:
    - `diff_models.py` — Java-extracted model vs Rust-frontend model,
      field-by-field.
-   - `diff_blobs.py` — the `.csf` from the full lfc pipeline vs the
+   - `diff_blobs.py` — the `.cspec` from the full lfc pipeline vs the
      reference artifact from the real Rust chronoc: identical capacities,
      operations, schedule, bindings, demands; meta differing only in
      `lf_sha256`, `lfc_version`, `lf_target`; plus execution of both under

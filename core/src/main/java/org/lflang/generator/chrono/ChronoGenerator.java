@@ -47,7 +47,7 @@ import org.lflang.util.FileUtil;
  * <p>There is exactly one Chrono target, and this generator is deliberately <em>thin</em>, in the
  * same way LF's own targets are thin shells around an external backend compiler (the C target
  * generates code and invokes a C compiler; the Rust target invokes cargo). Everything Layer1Labs
- * owns is Rust: the single lowering / schedule-unrolling / CSF-emission implementation lives in
+ * owns is Rust: the single lowering / schedule-unrolling / CSP1-emission implementation lives in
  * Rust chronoc, and this Java class never reimplements it. The generator's job is:
  *
  * <ol>
@@ -57,12 +57,12 @@ import org.lflang.util.FileUtil;
  *       <b>canonical model</b> ({@code chrono-model} JSON, schema below);
  *   <li>validate the ChronoHive LF subset v1 (spec 002, REQ-102) against that AST, rejecting
  *       anything outside it with a precise error — this class is the gatekeeper before lowering;
- *   <li>invoke the Rust backend: {@code chronoc lower-model <model.json> -o <name>.csf --emit-ir
- *       <name>.csf-ir.json}.
+ *   <li>invoke the Rust backend: {@code chronoc lower-model <model.json> -o <name>.cspec --emit-ir
+ *       <name>.cspec-ir.json}.
  * </ol>
  *
  * <p>The artifact produced by the backend is a deterministic binary in the Constraint Specification
- * Format ({@code .csf}, magic {@code CSF1}): the operations, capacities, unrolled schedule,
+ * Format ({@code .cspec}, magic {@code CSP1}): the operations, capacities, unrolled schedule,
  * dependencies, bindings, and provenance an engine needs (spec 002, REQ-103..106, REQ-113). The
  * generator does not build an engine. The same artifact runs on the ChronoHive engine (software
  * effector binding) and the ChronoFabric engine (hardware effector binding); engines differ only in
@@ -184,9 +184,9 @@ public class ChronoGenerator extends GeneratorBase {
       String base = context.getFileConfig().name;
       Path modelPath = srcGen.resolve(base + ".chrono-model.json");
       Files.writeString(modelPath, modelJson);
-      Path csfPath = srcGen.resolve(base + ".csf");
-      Path irPath = srcGen.resolve(base + ".csf-ir.json");
-      runBackend(modelPath, csfPath, irPath);
+      Path cspecPath = srcGen.resolve(base + ".cspec");
+      Path irPath = srcGen.resolve(base + ".cspec-ir.json");
+      runBackend(modelPath, cspecPath, irPath);
     } catch (SubsetException e) {
       messageReporter.nowhere().error(e.getMessage());
     } catch (IOException e) {
@@ -198,7 +198,7 @@ public class ChronoGenerator extends GeneratorBase {
   // Backend invocation (the Rust chronoc lowering is the single implementation)
   // ---------------------------------------------------------------------------
 
-  private void runBackend(Path modelPath, Path csfPath, Path irPath) throws IOException {
+  private void runBackend(Path modelPath, Path cspecPath, Path irPath) throws IOException {
     String chronoc = System.getProperty("chrono.chronoc");
     if (chronoc == null || chronoc.isBlank()) {
       chronoc = System.getenv("CHRONOC");
@@ -212,7 +212,7 @@ public class ChronoGenerator extends GeneratorBase {
             "lower-model",
             modelPath.toString(),
             "-o",
-            csfPath.toString(),
+            cspecPath.toString(),
             "--emit-ir",
             irPath.toString());
     Process proc;
@@ -244,7 +244,7 @@ public class ChronoGenerator extends GeneratorBase {
           .error("Chrono: Rust backend failed (exit " + exit + "):\n" + out.strip());
       return;
     }
-    messageReporter.nowhere().info("Chrono: wrote " + csfPath + " via the Rust chronoc backend.");
+    messageReporter.nowhere().info("Chrono: wrote " + cspecPath + " via the Rust chronoc backend.");
     if (!out.isBlank()) {
       messageReporter.nowhere().info(out.strip());
     }

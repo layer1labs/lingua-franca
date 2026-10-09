@@ -7,9 +7,9 @@
 #     -> built lfc (this repo, branch chrono-target)
 #     -> ChronoGenerator: real-AST extraction -> canonical model JSON
 #     -> Rust lowering via `chronoc lower-model` (proof harness binary
-#        wrapping the real chronoc sources) -> .csf
+#        wrapping the real chronoc sources) -> .cspec
 #   fixtures/three_intrinsics_python.lf  (target Python, the golden fixture)
-#     -> real Rust chronoc binary (REQ-112 flow) -> reference .chb
+#     -> real Rust chronoc binary (REQ-112 flow) -> reference .cspec
 #     -> harness `dump-model` -> Rust-frontend canonical model
 #
 # Proofs: (a) model-equality differential (diff_models.py),
@@ -46,21 +46,21 @@ echo "== 3. Compile the Chrono fixture with the built lfc =="
 rm -rf "$WORK/lfc-out" && mkdir -p "$WORK/lfc-out"
 CHRONOC="$HARNESS" "$LFC" -o "$WORK/lfc-out" "$PROOF_DIR/fixtures/Top.lf"
 JAVA_MODEL="$WORK/lfc-out/src-gen/Top/Top.chrono-model.json"
-CSF="$WORK/lfc-out/src-gen/Top/Top.csf"
+CSPEC="$WORK/lfc-out/src-gen/Top/Top.cspec"
 [ -f "$JAVA_MODEL" ] || JAVA_MODEL="$(find "$WORK/lfc-out" -name '*.chrono-model.json' | head -1)"
-[ -f "$CSF" ] || CSF="$(find "$WORK/lfc-out" -name '*.csf' | head -1)"
+[ -f "$CSPEC" ] || CSPEC="$(find "$WORK/lfc-out" -name '*.cspec' | head -1)"
 echo "   model: $JAVA_MODEL"
-echo "   csf  : $CSF"
+echo "   cspec: $CSPEC"
 
 echo "== 4. Reference artifact + Rust-frontend model from the Python fixture =="
 "$CHRONOC_REF" compile "$PROOF_DIR/fixtures/three_intrinsics_python.lf" \
-    --skip-lfc --capacity storage_bw=1000 -o "$WORK/reference.chb"
+    --skip-lfc --capacity storage_bw=1000 -o "$WORK/reference.cspec"
 "$HARNESS" dump-model "$PROOF_DIR/fixtures/three_intrinsics_python.lf" -o "$WORK/rust-model.json"
 
 echo "== 5. Model-equality differential =="
 python3 "$PROOF_DIR/scripts/diff_models.py" "$JAVA_MODEL" "$WORK/rust-model.json"
 
 echo "== 6. Artifact differential + reader execution =="
-python3 "$PROOF_DIR/scripts/diff_blobs.py" "$CSF" "$WORK/reference.chb" "$WT/src"
+python3 "$PROOF_DIR/scripts/diff_blobs.py" "$CSPEC" "$WORK/reference.cspec" "$WT/src"
 
 echo "PROOF COMPLETE"

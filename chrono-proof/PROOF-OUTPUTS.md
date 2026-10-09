@@ -154,3 +154,18 @@ sandbox javac parse check could not see any of these):
   `CSP1` magic. `diff_blobs.py` tracks that on the reference side;
   this branch's artifact keeps the provisional `CSF1` until the
   coordinated rename pass sweeps it.
+
+## Rename executed — CSP1 / `.cspec` (2026-10-08 night)
+
+The owner picked the finalist recorded above: **`.cspec` / `CSP1`**
+(Constraint Specification Format). The coordinated rename pass has
+now swept this branch: the Java generator emits `.cspec` /
+`.cspec-ir.json`, the proof harness no longer rewrites the Rust
+writer's magic (the writer emits `CSP1` directly, CRC unchanged),
+`diff_blobs.py` loads the Python reader unmodified for both
+artifacts (readers accept `CSP1` only — no dual-magic shim), and
+`proof.sh` / this kit's docs use the settled names throughout.
+
+The sections above are the historical record of runs made while
+`CSF1` was provisional; their quoted outputs are unchanged, exactly
+as produced at the time.

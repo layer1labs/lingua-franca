@@ -8,14 +8,15 @@
 //! sources by `#[path]` from the chronohive toolchain worktree (read-only) and
 //! exposes exactly the CLI the Java generator invokes:
 //!
-//!   chrono-lower-model-proof lower-model <model.json> -o <out.csf> --emit-ir <ir.json>
+//!   chrono-lower-model-proof lower-model <model.json> -o <out.cspec> --emit-ir <ir.json>
 //!   chrono-lower-model-proof dump-model  <source.lf> -o <model.json>
 //!
 //! `lower-model` converts the canonical model into chronoc's `Program` AST,
-//! runs the real `lower::lower` + `blob::write_blob`, then applies the settled
-//! format rename: the artifact magic is `CSF1` (Constraint Specification
-//! Format), with the CRC-32 trailer recomputed over the renamed body. The
-//! parsed content is otherwise byte-identical to the Rust writer's output.
+//! runs the real `lower::lower` + `blob::write_blob`. The artifact magic is
+//! `CSP1` (Constraint Specification Format, `.cspec`) — the settled name,
+//! emitted by the Rust writer unchanged; this harness performs no magic
+//! rewrite (an earlier provisional `CSF1` rewrite was removed by the
+//! coordinated CSP1 rename pass).
 //!
 //! `dump-model` runs the real Rust frontend (lexer+parser) on an `.lf` file
 //! and serializes the resulting `Program` into the same canonical model JSON
@@ -268,7 +269,7 @@ fn program_to_model(prog: &Program, source_text: &str) -> Value {
 }
 
 fn lower_model(args: &[String]) -> ExitCode {
-    // lower-model <model.json> -o <out.csf> [--emit-ir <ir.json>]
+    // lower-model <model.json> -o <out.cspec> [--emit-ir <ir.json>]
     let mut model_path: Option<String> = None;
     let mut out_path: Option<String> = None;
     let mut ir_path: Option<String> = None;
@@ -291,7 +292,7 @@ fn lower_model(args: &[String]) -> ExitCode {
         i += 1;
     }
     let (Some(model_path), Some(out_path)) = (model_path, out_path) else {
-        return fail("usage: lower-model <model.json> -o <out.csf> [--emit-ir <ir.json>]");
+        return fail("usage: lower-model <model.json> -o <out.cspec> [--emit-ir <ir.json>]");
     };
     let text = match std::fs::read_to_string(&model_path) {
         Ok(t) => t,
@@ -347,21 +348,18 @@ fn lower_model(args: &[String]) -> ExitCode {
             ));
         }
     }
-    let mut bytes = blob::write_blob(&model_blob);
-    // Settled rename: Constraint Specification Format — magic CSF1, CRC over
-    // the renamed body. Parsed content is otherwise the Rust writer's output.
-    let split = bytes.len() - 4;
-    bytes[0..4].copy_from_slice(b"CSF1");
-    let crc = blob::crc32_ieee(&bytes[..split]);
-    bytes[split..].copy_from_slice(&crc.to_le_bytes());
+    // The Rust writer emits the settled format directly: magic CSP1,
+    // CRC-32 trailer over the body. No post-processing (the provisional
+    // CSF1 magic rewrite this harness once applied was removed by the
+    // coordinated CSP1 rename pass).
+    let bytes = blob::write_blob(&model_blob);
     if let Err(e) = std::fs::write(&out_path, &bytes) {
         return fail(&format!("cannot write {out_path}: {e}"));
     }
     if let Some(ir_path) = &ir_path {
-        // The Rust IR module still names the form "chb-ir" pending the
-        // coordinated rename on the toolchain side; the emitted debug form
-        // for a .csf artifact is "csf-ir".
-        let json_text = ir::to_json(&model_blob).replace("\"chb-ir\"", "\"csf-ir\"");
+        // The Rust IR module names the debug form "cspec-ir" (the settled
+        // rename has landed on the toolchain side); emit it unchanged.
+        let json_text = ir::to_json(&model_blob);
         if let Err(e) = std::fs::write(ir_path, json_text) {
             return fail(&format!("cannot write {ir_path}: {e}"));
         }

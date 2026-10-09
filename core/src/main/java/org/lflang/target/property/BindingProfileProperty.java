@@ -12,7 +12,7 @@ import org.lflang.target.property.type.BindingProfileType.BindingProfile;
  *
  * <p>The profile is a compile-time validation knob only. It selects the effector manifest the
  * ChronoGenerator checks the program against; it does not change the emitted blob's semantics, does
- * not fork the CSF1 format, and is not recorded in the blob. The blob stays engine-neutral: the
+ * not fork the CSP1 format, and is not recorded in the blob. The blob stays engine-neutral: the
  * same artifact runs on the ChronoHive engine (software effectors) and on the ChronoFabric engine
  * (hardware endpoints), which differ only in effector binding.
  */
