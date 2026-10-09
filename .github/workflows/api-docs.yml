@@ -39,6 +39,10 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # The org caps the default GITHUB_TOKEN at read-only (repo settings
+        # PUT returns 409), so the bot cannot push gh-pages. Deploy with the
+        # repo's existing CROSS_REPO_TOKEN secret instead (same mechanism
+        # the chrono-proof workflow uses for cross-repo access).
+        ACCESS_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: docs/build/html # The folder the action should deploy.
