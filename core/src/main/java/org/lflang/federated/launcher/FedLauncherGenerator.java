@@ -1114,7 +1114,7 @@ public class FedLauncherGenerator {
       case C, CCPP -> new CBuildConfig(federate, fileConfig, messageReporter);
       case Python -> new PyBuildConfig(federate, fileConfig, messageReporter);
       case TS -> new TsBuildConfig(federate, fileConfig, messageReporter);
-      case CPP, Rust, UC, Polyglot -> throw new UnsupportedOperationException();
+      case CPP, Rust, UC, Polyglot, Chrono -> throw new UnsupportedOperationException();
     };
   }
 }
