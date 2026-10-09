@@ -516,9 +516,28 @@ public class ChronoGenerator extends GeneratorBase {
     StringBuilder b = new StringBuilder();
     b.append("{\"triggers\": ").append(ChronoModelJson.strList(triggers));
     b.append(", \"effects\": ").append(ChronoModelJson.strList(effects));
-    b.append(", \"body\": ").append(ChronoModelJson.str(r.getCode().getBody()));
+    b.append(", \"body\": ").append(ChronoModelJson.str(rawBodyText(r)));
     b.append(", \"line\": ").append(line).append("}");
     return b.toString();
+  }
+
+  /**
+   * The reaction body exactly as written in the source, between the {= and =} delimiters. {@code
+   * Code.getBody()} cannot be used for this: Body is a datatype rule, so Xtext joins its tokens
+   * with spaces and the line structure the Rust body parser relies on is lost. The parse node's
+   * text is the verbatim source slice, matching the Rust frontend's lexer, which captures the raw
+   * text between the delimiters.
+   */
+  private String rawBodyText(Reaction r) {
+    var codeNode = NodeModelUtils.findActualNodeFor(r.getCode());
+    if (codeNode == null) {
+      return r.getCode().getBody();
+    }
+    String text = codeNode.getText();
+    if (text.startsWith("{=") && text.endsWith("=}")) {
+      text = text.substring(2, text.length() - 2);
+    }
+    return text;
   }
 
   // ---------------------------------------------------------------------------
