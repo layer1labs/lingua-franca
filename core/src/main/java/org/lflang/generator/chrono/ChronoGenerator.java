@@ -62,7 +62,7 @@ import org.lflang.util.FileUtil;
  * </ol>
  *
  * <p>The artifact produced by the backend is a deterministic binary in the Constraint Specification
- * Format ({@code .cspec}, magic {@code CSP1}): the operations, capacities, unrolled schedule,
+ * format ({@code .cspec}, magic {@code CSP1}): the operations, capacities, unrolled schedule,
  * dependencies, bindings, and provenance an engine needs (spec 002, REQ-103..106, REQ-113). The
  * generator does not build an engine. The same artifact runs on the ChronoHive engine (software
  * effector binding) and the ChronoFabric engine (hardware effector binding); engines differ only in

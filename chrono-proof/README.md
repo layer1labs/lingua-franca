@@ -29,7 +29,7 @@ itself, because LF targets are Java — so the Java side is **thin**:
   (located via `-Dchrono.chronoc`, `$CHRONOC`, or `PATH`).
 
 There is exactly **one** Chrono target. The artifact (Constraint
-Specification Format, `.cspec`, magic `CSP1`) is engine-neutral:
+Specification format, `.cspec`, magic `CSP1`) is engine-neutral:
 `binding-profile` is a compile-time validation knob only and is recorded
 nowhere in the artifact.
 

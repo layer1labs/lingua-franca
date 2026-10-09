@@ -13,7 +13,7 @@
 //!
 //! `lower-model` converts the canonical model into chronoc's `Program` AST,
 //! runs the real `lower::lower` + `blob::write_blob`. The artifact magic is
-//! `CSP1` (Constraint Specification Format, `.cspec`) — the settled name,
+//! `CSP1` (Constraint Specification format, `.cspec`) — the settled name,
 //! emitted by the Rust writer unchanged; this harness performs no magic
 //! rewrite (an earlier provisional `CSF1` rewrite was removed by the
 //! coordinated CSP1 rename pass).

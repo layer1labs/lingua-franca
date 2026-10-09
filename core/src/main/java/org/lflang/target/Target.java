@@ -338,7 +338,7 @@ public enum Target {
   UC("uC", true, Target.C.keywords),
   /**
    * The Chrono target (Layer1Labs ChronoHive / ChronoFabric). There is exactly one Chrono target:
-   * programs are lowered by the ChronoGenerator to a deterministic Constraint Specification Format
+   * programs are lowered by the ChronoGenerator to a deterministic Constraint Specification format
    * (CSP1) binary artifact (a single deployment artifact, .cspec) that is executed by the
    * ChronoHive engine (software effector binding) or the ChronoFabric engine (hardware
    * effector binding). The engines differ only in effector binding, never in language or

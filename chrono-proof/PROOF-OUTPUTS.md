@@ -158,7 +158,7 @@ sandbox javac parse check could not see any of these):
 ## Rename executed — CSP1 / `.cspec` (2026-10-08 night)
 
 The owner picked the finalist recorded above: **`.cspec` / `CSP1`**
-(Constraint Specification Format). The coordinated rename pass has
+(Constraint Specification). The coordinated rename pass has
 now swept this branch: the Java generator emits `.cspec` /
 `.cspec-ir.json`, the proof harness no longer rewrites the Rust
 writer's magic (the writer emits `CSP1` directly, CRC unchanged),

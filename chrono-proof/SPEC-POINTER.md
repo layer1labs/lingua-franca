@@ -15,7 +15,7 @@ work's coverage home. In brief, it records:
 - the **lower-model contract** with toolchain spec 002: the single
   Rust lowering is invoked as
   `chronoc lower-model <model.json> -o <name>.cspec --emit-ir <name>.cspec-ir.json`,
-  emitting the Constraint Specification Format (`.cspec`, magic
+  emitting the Constraint Specification format (`.cspec`, magic
   `CSP1`);
 - the **gates**: the end-to-end proof in this directory
   (`scripts/proof.sh`, run by `.github/workflows/chrono-proof.yml`)

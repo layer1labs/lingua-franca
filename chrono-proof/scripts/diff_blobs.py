@@ -7,8 +7,8 @@ Loads BOTH artifacts with chronohive's Python reader (blob.py), unmodified:
   * the reference artifact produced by the real Rust chronoc binary from the
     Python-target fixture (REQ-112 flow: --skip-lfc --capacity storage_bw=1000).
 
-Both artifacts carry the settled format name: Constraint Specification
-Format, `.cspec`, magic `CSP1`. Readers accept CSP1 only — there is no
+Both artifacts carry the settled name: Constraint Specification,
+`.cspec`, magic `CSP1`. Readers accept CSP1 only — there is no
 dual-magic compatibility shim (the provisional `CSF1` magic this branch
 once emitted was removed by the coordinated CSP1 rename pass).
 
@@ -66,7 +66,7 @@ def main():
     cspec_magic = Path(cspec_path).read_bytes()[:4]
     ref_magic = Path(ref_path).read_bytes()[:4]
     if cspec_magic != b"CSP1":
-        fail(f".cspec magic is {cspec_magic!r}, expected b'CSP1' (Constraint Specification Format)")
+        fail(f".cspec magic is {cspec_magic!r}, expected b'CSP1' (Constraint Specification)")
     if ref_magic != b"CSP1":
         fail(f"reference magic is {ref_magic!r}, expected b'CSP1' (settled Rust writer)")
 
