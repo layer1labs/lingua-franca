@@ -666,6 +666,7 @@ public enum Target {
           config.register(
               BindingProfileProperty.INSTANCE,
               ChronoCapacitiesProperty.INSTANCE,
+              CompileDefinitionsProperty.INSTANCE,
               FilesProperty.INSTANCE,
               SingleThreadedProperty.INSTANCE);
         // Polyglot registers properties common to both C and Python that may appear in the
