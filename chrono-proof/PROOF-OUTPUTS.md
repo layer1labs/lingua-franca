@@ -90,3 +90,67 @@ Cal3D); finalists are `.cspec`/CSP1, `.chrono`/CHR1, `.constr`/CNS1.
 CSF1 is used provisionally throughout this branch until the pick is
 broadcast; renaming later touches only the magic constant, the file
 extension, and the IR format string.
+
+## CI verification (GitHub Actions, 2026-10-09)
+
+The sandbox blocker above was routed around with CI: workflow
+`.github/workflows/chrono-proof.yml` on this branch (push to
+`chrono-target` + `workflow_dispatch`), ubuntu-latest, Temurin JDK 21.
+The proof job checks out layer1labs/chronohive @ `feat/blob-lf-target`
+(the worktree branch supplies both the chronoc sources the harness
+compiles and the Python reader; cross-repo access via a repo secret —
+org policy disables deploy keys on that repository), assembles lfc
+with the real Gradle build (`./gradlew assemble` → installDist), then
+runs `chrono-proof/scripts/proof.sh` unmodified. A second job runs
+`./gradlew spotlessCheck`.
+
+Green run: https://github.com/layer1labs/lingua-franca/actions/runs/37866022756
+(both jobs success). Step results in the proof job:
+
+- harness build (real chronoc sources) and real chronoc build: OK
+- built lfc compiles `chrono-proof/fixtures/Top.lf` (`target Chrono`,
+  capacities `storage_bw=1000` from the target property):
+  `Top.csf` written via the Rust backend (3 ops, 6 steps, 568 bytes)
+- reference artifact from the Python fixture via the real chronoc:
+  3 ops, 6 steps, 565 bytes
+- MODEL DIFFERENTIAL: PASS — 4 reactors (CheckpointIO, PrefetchIO,
+  Top, Trainer) structurally identical between the Java AST
+  extraction and the Rust frontend
+- ARTIFACT PROOF: PASS — capacities/ops/schedule/bindings identical;
+  both artifacts executed under the Python reader's Runtime: 6/6
+  steps, admissions t.train_step=6, c.admit_checkpoint=2,
+  p.prefetch=6, 0 refusals, 0 drops; meta differs only in
+  lf_sha256 / lfc_version / lf_target, as documented
+
+What the real Gradle build found (all fixed on this branch; the
+sandbox javac parse check could not see any of these):
+
+- `LFGenerator`'s Chrono case constructed `FileConfig` directly,
+  but `FileConfig` is abstract — a minimal `ChronoFileConfig` was
+  added (mirrors the Python target's `PyFileConfig`), and
+  ChronoGenerator used an unconditional pattern in `instanceof`,
+  which does not compile at this project's `-source 17` level.
+- Exhaustive switches elsewhere broke: `DockerGenerator` and
+  `FedLauncherGenerator` needed Chrono cases (both throw, matching
+  the C++/Rust treatment — Docker and federation are unsupported).
+- `ASTUtils.createMainReactorInstance` unconditionally writes the
+  `compile-definitions` target property, so Target's Chrono case now
+  registers `CompileDefinitionsProperty` (generator ignores it).
+- Effects discrimination: `VarRef.getTransition()` is never null
+  (the `ModeTransition` enum's first literal is the EMF default);
+  mode-transition effects are now detected via
+  `getVariable() instanceof Mode`, as upstream does.
+- `Time` values: `forever`/`never` are separate grammar features
+  (`getForever()`/`getNever()`), and the unit is a raw string
+  converted with `TimeUnit.fromName` (subset units μs/ms/s/min only).
+- Reaction bodies: `Code.getBody()` space-joins the datatype rule's
+  tokens, destroying the line structure the Rust body parser needs;
+  the body is now taken from the parse node's verbatim text, sliced
+  between the `{=` and `=}` delimiters.
+- The fixture's main reactor is named `Top`, and LF requires the
+  file name to match — the fixture is `fixtures/Top.lf`.
+- The rename landed on the chronohive branch mid-flight: the
+  reference artifact and the Python reader now use the settled
+  `CSP1` magic. `diff_blobs.py` tracks that on the reference side;
+  this branch's artifact keeps the provisional `CSF1` until the
+  coordinated rename pass sweeps it.
