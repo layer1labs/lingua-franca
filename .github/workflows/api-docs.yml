@@ -30,6 +30,12 @@ jobs:
         brew install doxygen
     - name: Checkout repo
       uses: actions/checkout@v4
+      with:
+        # Do not persist the read-only GITHUB_TOKEN in git config: the
+        # persisted extraheader overrides the deploy action's ACCESS_TOKEN
+        # on push, so the gh-pages push would still authenticate as
+        # github-actions[bot] and be denied (verified on run 37926233652).
+        persist-credentials: false
     - name: Build docs
       run: |
         cd docs
