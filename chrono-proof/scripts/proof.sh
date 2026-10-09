@@ -2,7 +2,8 @@
 # End-to-end proof for the thin Chrono target (see ../README.md).
 #
 # Pipeline under test:
-#   fixtures/three_intrinsics_chrono.lf  (target Chrono)
+#   fixtures/Top.lf  (target Chrono; named after its main reactor,
+#        as LF validation requires)
 #     -> built lfc (this repo, branch chrono-target)
 #     -> ChronoGenerator: real-AST extraction -> canonical model JSON
 #     -> Rust lowering via `chronoc lower-model` (proof harness binary
@@ -43,9 +44,9 @@ CHRONOC_REF="$WT/toolchain/chronoc/target/release/chronoc"
 
 echo "== 3. Compile the Chrono fixture with the built lfc =="
 rm -rf "$WORK/lfc-out" && mkdir -p "$WORK/lfc-out"
-CHRONOC="$HARNESS" "$LFC" -o "$WORK/lfc-out" "$PROOF_DIR/fixtures/three_intrinsics_chrono.lf"
-JAVA_MODEL="$WORK/lfc-out/src-gen/ThreeIntrinsicsChrono/three_intrinsics_chrono.chrono-model.json"
-CSF="$WORK/lfc-out/src-gen/ThreeIntrinsicsChrono/three_intrinsics_chrono.csf"
+CHRONOC="$HARNESS" "$LFC" -o "$WORK/lfc-out" "$PROOF_DIR/fixtures/Top.lf"
+JAVA_MODEL="$WORK/lfc-out/src-gen/Top/Top.chrono-model.json"
+CSF="$WORK/lfc-out/src-gen/Top/Top.csf"
 [ -f "$JAVA_MODEL" ] || JAVA_MODEL="$(find "$WORK/lfc-out" -name '*.chrono-model.json' | head -1)"
 [ -f "$CSF" ] || CSF="$(find "$WORK/lfc-out" -name '*.csf' | head -1)"
 echo "   model: $JAVA_MODEL"

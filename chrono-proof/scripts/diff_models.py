@@ -2,7 +2,7 @@
 """Model-equality differential for the thin Chrono target.
 
 Compares the canonical model the Java Chrono target extracted from the real
-LF AST (three_intrinsics_chrono.lf, `target Chrono`) against the canonical
+LF AST (Top.lf, `target Chrono`) against the canonical
 model produced from the Rust frontend's AST for the same program
 (three_intrinsics_python.lf, `target Python`, via the harness `dump-model`).
 
