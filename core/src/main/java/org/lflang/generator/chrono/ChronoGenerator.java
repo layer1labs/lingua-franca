@@ -24,6 +24,7 @@ import org.lflang.lf.Connection;
 import org.lflang.lf.Expression;
 import org.lflang.lf.Initializer;
 import org.lflang.lf.Literal;
+import org.lflang.lf.Mode;
 import org.lflang.lf.Model;
 import org.lflang.lf.Parameter;
 import org.lflang.lf.ParameterReference;
@@ -504,7 +505,7 @@ public class ChronoGenerator extends GeneratorBase {
     }
     List<String> effects = new ArrayList<>();
     for (var e : r.getEffects()) {
-      if (e.getTransition() != null) {
+      if (e.getVariable() instanceof Mode) {
         throw subset(
             "mode transitions as reaction effects are not supported (reactor " + reactorName + ")");
       }
