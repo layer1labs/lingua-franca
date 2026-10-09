@@ -1,0 +1,14 @@
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+A new daemon was started but could not be connected to: pid=DaemonInfo{pid=23299, address=[f1df4aa7-0ba8-4565-8610-6733fcf51251 port:38503, addresses:[/127.0.0.1]], state=Busy, lastBusy=1791501630835, context=DefaultDaemonContext[uid=cea6ee6c-a33d-4edf-96d0-176d174dbe50,javaHome=/home/hatch/workspace/tools/jdk-21-full,javaVersion=21,daemonRegistryDir=/home/hatch/workspace/.gradle-lf/daemon,pid=23299,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]}, address= [f1df4aa7-0ba8-4565-8610-6733fcf51251 port:38503, addresses:[/127.0.0.1]].
+
+* Try:
+> For more information, please refer to https://docs.gradle.org/8.8/userguide/troubleshooting.html#network_connection in the Gradle documentation.
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+GRADLE_EXIT=1

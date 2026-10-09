@@ -1,0 +1,12 @@
+[package]
+name = "chrono-lower-model-proof"
+# Must match the chronoc version recorded in the canonical model (the
+# Rust lowering takes chronoc_version from its crate version).
+version = "0.1.0-alpha.1"
+edition = "2021"
+description = "Proof harness for the chrono-model contract: drives the real Rust chronoc frontend/lowering sources (included by path from the chronohive toolchain worktree) behind the `chronoc lower-model` CLI contract that the lfc Chrono target invokes."
+
+[dependencies]
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+toml = "1.1.6"

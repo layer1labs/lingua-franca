@@ -262,7 +262,7 @@ public abstract class DockerGenerator {
       case TS -> new TSDockerGenerator(context);
       case Python -> new PythonDockerGenerator(context);
       case Rust -> new RustDockerGenerator(context);
-      case CPP, UC, Polyglot ->
+      case CPP, UC, Polyglot, Chrono ->
           throw new IllegalArgumentException("No Docker support for " + target + " yet.");
     };
   }
