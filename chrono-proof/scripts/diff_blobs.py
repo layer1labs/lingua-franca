@@ -7,10 +7,11 @@ Loads BOTH artifacts with chronohive's Python reader (blob.py):
   * the reference artifact produced by the real Rust chronoc binary from the
     Python-target fixture (REQ-112 flow: --skip-lfc --capacity storage_bw=1000).
 
-The reader's magic check expects CHB1; the settled format name is CSF1. For
-the .csf we load a copy of the reader module with exactly the magic constant
-renamed (the coordinated rename lands in chronohive separately) — every other
-byte of parsing/validation/execution logic is the reader's own. The intentional
+The reader's magic check expects CSP1 (the settled name, .cspec/CSP1, which
+has landed in the chronohive worktree). This branch's artifact still carries
+the provisional CSF1 magic, so for the .csf we load a copy of the reader
+module with exactly the magic constant renamed — every other byte of
+parsing/validation/execution logic is the reader's own. The intentional
 magic difference is asserted, not hidden.
 
 Asserts:
@@ -32,12 +33,13 @@ from pathlib import Path
 
 
 def load_reader(src_dir: Path, csf_magic: bool, tag: str):
-    """Import blob.py from the chronohive worktree, optionally with the
-    settled CSF1 magic (the coordinated rename, applied to a temp copy)."""
+    """Import blob.py from the chronohive worktree, optionally with this
+    branch's provisional CSF1 magic (the reader's settled CSP1 magic,
+    renamed in a temp copy)."""
     code = (src_dir / "chronohive" / "blob.py").read_text()
     if csf_magic:
-        assert 'b"CHB1"' in code, "reader magic constant not found"
-        code = code.replace('b"CHB1"', 'b"CSF1"')
+        assert 'b"CSP1"' in code, "reader magic constant not found"
+        code = code.replace('b"CSP1"', 'b"CSF1"')
     tmp = Path(f"/tmp/chrono_proof_reader_{tag}")
     pkg = tmp / "chronohive"
     pkg.mkdir(parents=True, exist_ok=True)
@@ -72,8 +74,8 @@ def main():
     ref_magic = Path(ref_path).read_bytes()[:4]
     if csf_magic != b"CSF1":
         fail(f".csf magic is {csf_magic!r}, expected b'CSF1' (Constraint Specification Format)")
-    if ref_magic != b"CHB1":
-        fail(f"reference magic is {ref_magic!r}, expected b'CHB1' (pre-rename Rust writer)")
+    if ref_magic != b"CSP1":
+        fail(f"reference magic is {ref_magic!r}, expected b'CSP1' (renamed Rust writer)")
 
     csf_mod = load_reader(src_dir, csf_magic=True, tag="csf")
     ref_mod = load_reader(src_dir, csf_magic=False, tag="ref")
@@ -139,8 +141,8 @@ def main():
     print("  execution  : both artifacts ran 6/6 steps under the Python reader's "
           "Runtime; admissions t.train_step=6, c.admit_checkpoint=2, p.prefetch=6; "
           "0 refusals, 0 drops.")
-    print("  magic      : csf=CSF1 vs ref=CHB1 — the intentional, settled rename "
-          "(Constraint Specification Format); parsed content identical.")
+    print("  magic      : csf=CSF1 (provisional, this branch) vs ref=CSP1 "
+          "(settled name); parsed content identical.")
 
 
 if __name__ == "__main__":
