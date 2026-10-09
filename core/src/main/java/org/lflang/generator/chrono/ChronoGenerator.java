@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
 import org.eclipse.xtext.util.RuntimeIOException;
 import org.lflang.LocalStrings;
+import org.lflang.TimeUnit;
 import org.lflang.ast.ASTUtils;
 import org.lflang.generator.GeneratorBase;
 import org.lflang.generator.LFGeneratorContext;
@@ -503,12 +504,11 @@ public class ChronoGenerator extends GeneratorBase {
     }
     List<String> effects = new ArrayList<>();
     for (var e : r.getEffects()) {
-      if (e instanceof VarRef vr) {
-        effects.add(vr.getVariable().getName());
-      } else {
+      if (e.getTransition() != null) {
         throw subset(
             "mode transitions as reaction effects are not supported (reactor " + reactorName + ")");
       }
+      effects.add(e.getVariable().getName());
     }
     var node = NodeModelUtils.findActualNodeFor(r);
     int line = node != null ? node.getStartLine() : 1;
@@ -612,7 +612,7 @@ public class ChronoGenerator extends GeneratorBase {
               + " must declare an explicit (offset, period) in subset v1");
     }
     if (expr instanceof Time time) {
-      if (time.isForever() || time.isNever()) {
+      if (time.getForever() != null || time.getNever() != null) {
         throw subset(
             "forever/never timers are not supported in subset v1 (timer "
                 + timerName
@@ -620,13 +620,13 @@ public class ChronoGenerator extends GeneratorBase {
                 + reactorName
                 + ")");
       }
-      if (time.getUnit() == null) {
+      if (time.getUnit() == null || time.getUnit().isEmpty()) {
         // A bare amount carries the subset's default unit (ms), mirroring
         // chronoc's parser convention for unit-less time values.
         return "{\"amount\": " + time.getInterval() + ", \"unit\": \"ms\"}";
       }
       String unit =
-          switch (time.getUnit()) {
+          switch (TimeUnit.fromName(time.getUnit())) {
             case MICRO -> "us";
             case MILLI -> "ms";
             case SECOND -> "s";
