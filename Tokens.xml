@@ -1802,6 +1802,33 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>org::lflang::generator::chrono::ChronoFileConfig</Name>
+      <APILanguage>java</APILanguage>
+      <Type>cl</Type>
+      <Scope>org.lflang.generator.chrono.ChronoFileConfig</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoFileConfig.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>org::lflang::generator::chrono::ChronoGenerator</Name>
+      <APILanguage>java</APILanguage>
+      <Type>cl</Type>
+      <Scope>org.lflang.generator.chrono.ChronoGenerator</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>org::lflang::generator::chrono::ChronoModelJson</Name>
+      <APILanguage>java</APILanguage>
+      <Type>cl</Type>
+      <Scope>org.lflang.generator.chrono.ChronoModelJson</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>org::lflang::generator::CodeBuilder</Name>
       <APILanguage>java</APILanguage>
       <Type>cl</Type>
@@ -2783,6 +2810,15 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>org::lflang::target::property::BindingProfileProperty</Name>
+      <APILanguage>java</APILanguage>
+      <Type>cl</Type>
+      <Scope>org.lflang.target.property.BindingProfileProperty</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>org::lflang::target::property::BooleanProperty</Name>
       <APILanguage>java</APILanguage>
       <Type>cl</Type>
@@ -2825,6 +2861,15 @@
       <Scope>org.lflang.target.property.CargoFeaturesProperty</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1CargoFeaturesProperty.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>org::lflang::target::property::ChronoCapacitiesProperty</Name>
+      <APILanguage>java</APILanguage>
+      <Type>cl</Type>
+      <Scope>org.lflang.target.property.ChronoCapacitiesProperty</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1ChronoCapacitiesProperty.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3311,6 +3356,24 @@
       <Scope>org.lflang.target.property.type.ArrayType</Scope>
     </TokenIdentifier>
     <Path>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1ArrayType.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>org::lflang::target::property::type::BindingProfileType</Name>
+      <APILanguage>java</APILanguage>
+      <Type>cl</Type>
+      <Scope>org.lflang.target.property.type.BindingProfileType</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>org::lflang::target::property::type::BindingProfileType::BindingProfile</Name>
+      <APILanguage>java</APILanguage>
+      <Type>cl</Type>
+      <Scope>org.lflang.target.property.type.BindingProfileType.BindingProfile</Scope>
+    </TokenIdentifier>
+    <Path>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -4400,6 +4463,15 @@
       <Scope>org::lflang::generator::c</Scope>
     </TokenIdentifier>
     <Path>namespaceorg_1_1lflang_1_1generator_1_1c.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>org::lflang::generator::chrono</Name>
+      <APILanguage>java</APILanguage>
+      <Type>ns</Type>
+      <Scope>org::lflang::generator::chrono</Scope>
+    </TokenIdentifier>
+    <Path>namespaceorg_1_1lflang_1_1generator_1_1chrono.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -7091,6 +7163,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
     <Anchor>a6a5c01889646675b2403aba03a9561b1</Anchor>
     <DeclaredIn>TargetProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>astElementFromConfig</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a6a5c01889646675b2403aba03a9561b1</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -10860,6 +10942,16 @@
       <Name>check</Name>
       <APILanguage>unknown</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.type.OptionsType&lt; BindingProfile &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
+    <Anchor>a50b001132a71a2e3bce54ebc9e22eb57</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>check</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.type.OptionsType&lt; BuildType &gt;</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
@@ -11458,6 +11550,16 @@
       <Name>checkType</Name>
       <APILanguage>unknown</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>ad2943097a2b239aecb9c0bf4eb2968f6</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>checkType</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.TargetProperty&lt; Boolean, PrimitiveType &gt;</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
@@ -11757,6 +11859,48 @@
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1generator_1_1ReactorInstance.html</Path>
     <Anchor>aacc579a735c4d6c9a9bb62b31c5d7f90</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Chrono</Name>
+      <APILanguage>java</APILanguage>
+      <Type>data</Type>
+      <Scope>org.lflang.target.Target</Scope>
+    </TokenIdentifier>
+    <Path>enumorg_1_1lflang_1_1target_1_1Target.html</Path>
+    <Anchor>a31fdd8d3683991c37d504e9d9b8c439c</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>CHRONOC_VERSION</Name>
+      <APILanguage>java</APILanguage>
+      <Type>data</Type>
+      <Scope>org.lflang.generator.chrono.ChronoGenerator</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</Path>
+    <Anchor>a9a7b6a44136af0ba5ba711e71bb2b03f</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ChronoFileConfig</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.generator.chrono.ChronoFileConfig</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoFileConfig.html</Path>
+    <Anchor>a3f27e4c4058cde172afd849db74a169f</Anchor>
+    <DeclaredIn>ChronoFileConfig.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ChronoGenerator</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.generator.chrono.ChronoGenerator</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</Path>
+    <Anchor>ae7d618fcba6f8637f3ba383274c3ff7b</Anchor>
+    <DeclaredIn>ChronoGenerator.java</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -14660,6 +14804,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>DEPTH_BW</Name>
+      <APILanguage>java</APILanguage>
+      <Type>data</Type>
+      <Scope>org.lflang.generator.chrono.ChronoGenerator</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</Path>
+    <Anchor>aeb35be33dbd5f277a995d8029e8d4431</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>DESC_ARDUINO</Name>
       <APILanguage>java</APILanguage>
       <Type>data</Type>
@@ -15540,6 +15694,17 @@
       <Name>doGenerate</Name>
       <APILanguage>java</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.generator.chrono.ChronoGenerator</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</Path>
+    <Anchor>a33c8f72e160abff1734464003d88adde</Anchor>
+    <DeclaredIn>ChronoGenerator.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>doGenerate</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.generator.GeneratorBase</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</Path>
@@ -16068,6 +16233,17 @@
       <Name>enumClass</Name>
       <APILanguage>java</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.type.BindingProfileType</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType.html</Path>
+    <Anchor>aae7db3df69918c0427ffed2fa38f5ef9</Anchor>
+    <DeclaredIn>BindingProfileType.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>enumClass</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.type.BuildTypeType</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BuildTypeType.html</Path>
@@ -16150,6 +16326,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1SchedulerType.html</Path>
     <Anchor>a34df9dd269b5a439e7d56d1f3f7f3cc2</Anchor>
     <DeclaredIn>SchedulerType.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>enumClass</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.type.OptionsType&lt; BindingProfile &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
+    <Anchor>acba28480a983143a56542199f2b94eda</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -16392,6 +16578,16 @@
     <Path>classorg_1_1lflang_1_1diagram_1_1lsp_1_1BuildArgs.html</Path>
     <Anchor>a255ff37db96a37ddaac7ac4612898890</Anchor>
     <DeclaredIn>BuildArgs.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>equals</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a204b717061ca87ddd71cbc866440af5c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -16690,6 +16886,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>esc</Name>
+      <APILanguage>java</APILanguage>
+      <Type>clm</Type>
+      <Scope>org.lflang.generator.chrono.ChronoModelJson</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html</Path>
+    <Anchor>a1317df49cd04ff5b2e067bbf59992ae9</Anchor>
+    <DeclaredIn>ChronoModelJson.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>escapeIdentifier</Name>
       <APILanguage>java</APILanguage>
       <Type>instm</Type>
@@ -16924,6 +17131,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1TargetConfig.html</Path>
     <Anchor>aaf8134830c5a082ad1c623473befa9ac</Anchor>
     <DeclaredIn>TargetConfig.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>FABRIC</Name>
+      <APILanguage>java</APILanguage>
+      <Type>data</Type>
+      <Scope>org.lflang.target.property.type.BindingProfileType.BindingProfile</Scope>
+    </TokenIdentifier>
+    <Path>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html</Path>
+    <Anchor>a1a8e8d4198e36e58266887054ca26644</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -17789,6 +18006,16 @@
       <Name>forName</Name>
       <APILanguage>unknown</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.type.OptionsType&lt; BindingProfile &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
+    <Anchor>a4ff3b44a960db9e5c76bc1669e2dd123</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>forName</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.type.OptionsType&lt; BuildType &gt;</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
@@ -17864,6 +18091,17 @@
     <Path>classorg_1_1lflang_1_1InferredType.html</Path>
     <Anchor>a0ee9c00e84610e5cd3b872409a23483e</Anchor>
     <DeclaredIn>InferredType.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fromAst</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.BindingProfileProperty</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</Path>
+    <Anchor>a178d7ef134c63fa7d13b4c837854571a</Anchor>
+    <DeclaredIn>BindingProfileProperty.java</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -18189,6 +18427,16 @@
       <Name>fromAst</Name>
       <APILanguage>unknown</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a933963905148cf092a184ae81ef47311</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fromAst</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.TargetProperty&lt; Boolean, PrimitiveType &gt;</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
@@ -18447,6 +18695,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
     <Anchor>ac340310011200e10f311d2fe985be828</Anchor>
     <DeclaredIn>TargetProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fromJSON</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>ac340310011200e10f311d2fe985be828</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -18755,6 +19013,17 @@
     <Path>classorg_1_1lflang_1_1generator_1_1Range.html</Path>
     <Anchor>afbef26224b48971a621ba63b6a5aa271</Anchor>
     <DeclaredIn>Range.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fromString</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.BindingProfileProperty</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</Path>
+    <Anchor>a139667943cb568aab1f8e8132fea9f57</Anchor>
+    <DeclaredIn>BindingProfileProperty.java</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -19074,6 +19343,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1WorkersProperty.html</Path>
     <Anchor>a607f49f73a7ef83c316ea7a0df98c640</Anchor>
     <DeclaredIn>WorkersProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>fromString</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a24adaa91451dc8f91a17a08242c56f81</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -22713,6 +22992,17 @@
       <Name>getDefault</Name>
       <APILanguage>java</APILanguage>
       <Type>clm</Type>
+      <Scope>org.lflang.target.property.type.BindingProfileType.BindingProfile</Scope>
+    </TokenIdentifier>
+    <Path>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html</Path>
+    <Anchor>a8833290f277e496615109f7ef65e8fac</Anchor>
+    <DeclaredIn>BindingProfileType.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getDefault</Name>
+      <APILanguage>java</APILanguage>
+      <Type>clm</Type>
       <Scope>org.lflang.target.property.type.BuildTypeType.BuildType</Scope>
     </TokenIdentifier>
     <Path>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BuildTypeType_1_1BuildType.html</Path>
@@ -23333,6 +23623,17 @@
     <Path>classorg_1_1lflang_1_1analyses_1_1uclid_1_1UclidGenerator.html</Path>
     <Anchor>ac86944b4aec6b5b540dde787d6a5ed98</Anchor>
     <DeclaredIn>UclidGenerator.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getDockerGenerator</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.generator.chrono.ChronoGenerator</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</Path>
+    <Anchor>adee9e7c7bc0a98ac599631a3597c2372</Anchor>
+    <DeclaredIn>ChronoGenerator.java</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -27062,6 +27363,17 @@
       <Name>getTarget</Name>
       <APILanguage>java</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.generator.chrono.ChronoGenerator</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</Path>
+    <Anchor>a5443e234724649207c575849659a3df1</Anchor>
+    <DeclaredIn>ChronoGenerator.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getTarget</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.generator.GeneratorBase</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</Path>
@@ -27452,6 +27764,17 @@
     <Path>classorg_1_1lflang_1_1analyses_1_1uclid_1_1UclidGenerator.html</Path>
     <Anchor>aa594f80cc82a6a9d5206d2f25ef33e89</Anchor>
     <DeclaredIn>UclidGenerator.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>getTargetTypes</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.generator.chrono.ChronoGenerator</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</Path>
+    <Anchor>a66c160ff028ea3110a5a67c7bf5e715a</Anchor>
+    <DeclaredIn>ChronoGenerator.java</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -28445,6 +28768,16 @@
       <Name>hashCode</Name>
       <APILanguage>unknown</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a29acc44b1e353f4638f22bb3289d7338</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>hashCode</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.TargetProperty&lt; Boolean, PrimitiveType &gt;</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
@@ -29022,6 +29355,16 @@
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1generator_1_1RuntimeRange.html</Path>
     <Anchor>a5ed47a91a5e5443260030ab5c9267b2a</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>HIVE</Name>
+      <APILanguage>java</APILanguage>
+      <Type>data</Type>
+      <Scope>org.lflang.target.property.type.BindingProfileType.BindingProfile</Scope>
+    </TokenIdentifier>
+    <Path>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html</Path>
+    <Anchor>aeab711a07f58090e78891a03ad8608f7</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -29683,6 +30026,17 @@
       <Name>initialValue</Name>
       <APILanguage>java</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.BindingProfileProperty</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</Path>
+    <Anchor>a950343e78edfd14cd334b80134b23c71</Anchor>
+    <DeclaredIn>BindingProfileProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>initialValue</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.BooleanProperty</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1BooleanProperty.html</Path>
@@ -29996,6 +30350,16 @@
     <Path>classorg_1_1lflang_1_1tests_1_1compiler_1_1LinguaFrancaASTUtilsTest.html</Path>
     <Anchor>a2d459e650364d71717c1b9bf6aa2cc36</Anchor>
     <DeclaredIn>LinguaFrancaASTUtilsTest.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>initialValue</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>ad2c7f85f75eb09fc6c90f25daadc180e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -30359,6 +30723,16 @@
       <Name>INSTANCE</Name>
       <APILanguage>java</APILanguage>
       <Type>data</Type>
+      <Scope>org.lflang.target.property.BindingProfileProperty</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</Path>
+    <Anchor>afc0427f04d93e0e6c9b20e54e4b61a14</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>INSTANCE</Name>
+      <APILanguage>java</APILanguage>
+      <Type>data</Type>
       <Scope>org.lflang.target.property.BuildCommandsProperty</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1BuildCommandsProperty.html</Path>
@@ -30393,6 +30767,16 @@
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1CargoFeaturesProperty.html</Path>
     <Anchor>a8b488d8b5e1c7923ffbbb58172951aaa</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>INSTANCE</Name>
+      <APILanguage>java</APILanguage>
+      <Type>data</Type>
+      <Scope>org.lflang.target.property.ChronoCapacitiesProperty</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1ChronoCapacitiesProperty.html</Path>
+    <Anchor>aaa462c44f6a6ada97224a23d4ec230bd</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -32785,6 +33169,16 @@
       <Name>loadFromFederate</Name>
       <APILanguage>unknown</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a887afc08ede48190976f784b8769b7ea</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>loadFromFederate</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.TargetProperty&lt; Boolean, PrimitiveType &gt;</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
@@ -33010,6 +33404,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
     <Anchor>a033370849eef3120afd46c4845863e2d</Anchor>
     <DeclaredIn>TargetProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>loadFromFederation</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a033370849eef3120afd46c4845863e2d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -33274,6 +33678,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
     <Anchor>ab53684f78f96af96841c92187f131488</Anchor>
     <DeclaredIn>TargetProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>loadFromImport</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>ab53684f78f96af96841c92187f131488</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -34253,6 +34667,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>MB_BW</Name>
+      <APILanguage>java</APILanguage>
+      <Type>data</Type>
+      <Scope>org.lflang.generator.chrono.ChronoGenerator</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</Path>
+    <Anchor>a970bca16b8a9da94daf429a8c22d9a3d</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>MEMORIZE_EXPANSION_STATES</Name>
       <APILanguage>java</APILanguage>
       <Type>data</Type>
@@ -34889,6 +35313,17 @@
       <Name>name</Name>
       <APILanguage>java</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.BindingProfileProperty</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</Path>
+    <Anchor>ab4a49716ac1c288225be363dd78fb57f</Anchor>
+    <DeclaredIn>BindingProfileProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>name</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.BuildCommandsProperty</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1BuildCommandsProperty.html</Path>
@@ -34927,6 +35362,17 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1CargoFeaturesProperty.html</Path>
     <Anchor>a55bce2cab0b86f6dbd23f91f92fcf830</Anchor>
     <DeclaredIn>CargoFeaturesProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>name</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.ChronoCapacitiesProperty</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1ChronoCapacitiesProperty.html</Path>
+    <Anchor>a8821d6d104aabedd333d8d8663b4d0dd</Anchor>
+    <DeclaredIn>ChronoCapacitiesProperty.java</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -35378,6 +35824,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1WorkersProperty.html</Path>
     <Anchor>a4cb780eb71c517ff8222675be3e4b78a</Anchor>
     <DeclaredIn>WorkersProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>name</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a377e5e754300aea66587e195a3f3fc39</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -36728,6 +37184,16 @@
       <Name>optionsList</Name>
       <APILanguage>unknown</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.type.OptionsType&lt; BindingProfile &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
+    <Anchor>abbde7293586142994ecd1427e39fc7be</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>optionsList</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.type.OptionsType&lt; BuildType &gt;</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
@@ -36803,6 +37269,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
     <Anchor>a74017325de7c0c3f7bbac83724817f5b</Anchor>
     <DeclaredIn>OptionsType.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>optionsString</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.type.OptionsType&lt; BindingProfile &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
+    <Anchor>a74017325de7c0c3f7bbac83724817f5b</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -37142,6 +37618,16 @@
       <Name>override</Name>
       <APILanguage>unknown</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a2a3ae8487cf2df37b7e3c98a9d594685</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>override</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.TargetProperty&lt; Boolean, PrimitiveType &gt;</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
@@ -37388,6 +37874,17 @@
     <Path>classorg_1_1lflang_1_1generator_1_1Validator_1_1Pair.html</Path>
     <Anchor>a6151bc5417f9e51ac8b92d7bb22f64e2</Anchor>
     <DeclaredIn>Validator.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>pairs</Name>
+      <APILanguage>java</APILanguage>
+      <Type>clm</Type>
+      <Scope>org.lflang.generator.chrono.ChronoModelJson</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html</Path>
+    <Anchor>a3b5f4687e6bebce280131dbafda5f8a8</Anchor>
+    <DeclaredIn>ChronoModelJson.java</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -43985,6 +44482,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>str</Name>
+      <APILanguage>java</APILanguage>
+      <Type>clm</Type>
+      <Scope>org.lflang.generator.chrono.ChronoModelJson</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html</Path>
+    <Anchor>abde4777f4c76ab754f9abe930f2fee4d</Anchor>
+    <DeclaredIn>ChronoModelJson.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>STRICT</Name>
       <APILanguage>java</APILanguage>
       <Type>data</Type>
@@ -44086,6 +44594,17 @@
     <Path>classorg_1_1lflang_1_1federated_1_1serialization_1_1FedProtoCSerializationTest.html</Path>
     <Anchor>a229ab4f682b306d8d77519e2e1bbc263</Anchor>
     <DeclaredIn>FedProtoCSerializationTest.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>strList</Name>
+      <APILanguage>java</APILanguage>
+      <Type>clm</Type>
+      <Scope>org.lflang.generator.chrono.ChronoModelJson</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html</Path>
+    <Anchor>afbd068427c7a09d356d9ba8511615033</Anchor>
+    <DeclaredIn>ChronoModelJson.java</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -44907,6 +45426,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
     <Anchor>abfdae3bad81323c6cc18146a7be72380</Anchor>
     <DeclaredIn>TargetProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>TargetProperty</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>abfdae3bad81323c6cc18146a7be72380</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -46739,6 +47268,17 @@
       <Name>toAstElement</Name>
       <APILanguage>java</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.BindingProfileProperty</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</Path>
+    <Anchor>a5deff36be4d5971163cc623fd05c2282</Anchor>
+    <DeclaredIn>BindingProfileProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>toAstElement</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.BooleanProperty</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1BooleanProperty.html</Path>
@@ -47052,6 +47592,16 @@
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1WorkersProperty.html</Path>
     <Anchor>a5037dda5160124d5e64404cd773ee863</Anchor>
     <DeclaredIn>WorkersProperty.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>toAstElement</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a7f6fdee8910285230340bcd7a52f3ade</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -47987,6 +48537,17 @@
       <Name>toString</Name>
       <APILanguage>java</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.type.BindingProfileType.BindingProfile</Scope>
+    </TokenIdentifier>
+    <Path>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html</Path>
+    <Anchor>aaf4716d15e7e6be7783c939281435372</Anchor>
+    <DeclaredIn>BindingProfileType.java</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>toString</Name>
+      <APILanguage>java</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.type.BuildTypeType.BuildType</Scope>
     </TokenIdentifier>
     <Path>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BuildTypeType_1_1BuildType.html</Path>
@@ -48198,6 +48759,16 @@
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1graph_1_1DirectedGraph.html</Path>
     <Anchor>abf3d4686cb6dc873f5129b0d0c014591</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>toString</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a80cded89b1d2808e307cd4b9991f887b</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -48418,6 +48989,16 @@
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
     <Anchor>a80cded89b1d2808e307cd4b9991f887b</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>toString</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.type.OptionsType&lt; BindingProfile &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
+    <Anchor>a3942bb143f9f5a359126ff5c532fcdf7</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -49183,6 +49764,16 @@
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1generator_1_1TriggerInstance_1_1BuiltinTriggerVariable.html</Path>
     <Anchor>ab7164b163bf0d54fc6cf21be14215676</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>type</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>data</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>ae91c05dae9df2fc924ba84e4072e2087</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -50113,6 +50704,16 @@
       <Name>update</Name>
       <APILanguage>unknown</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a74548a3778514c9c3757ee031dae825c</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>update</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.TargetProperty&lt; Boolean, PrimitiveType &gt;</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
@@ -50655,6 +51256,16 @@
       <Name>validate</Name>
       <APILanguage>unknown</APILanguage>
       <Type>instm</Type>
+      <Scope>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
+    <Anchor>a05712b0e4f6256710f969dfd27a097f3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>validate</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
       <Scope>org.lflang.target.property.TargetProperty&lt; Boolean, PrimitiveType &gt;</Scope>
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
@@ -50869,6 +51480,16 @@
     </TokenIdentifier>
     <Path>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</Path>
     <Anchor>a05712b0e4f6256710f969dfd27a097f3</Anchor>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>validate</Name>
+      <APILanguage>unknown</APILanguage>
+      <Type>instm</Type>
+      <Scope>org.lflang.target.property.type.OptionsType&lt; BindingProfile &gt;</Scope>
+    </TokenIdentifier>
+    <Path>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</Path>
+    <Anchor>a7f6dff94cfcb7c9c66d6c2c43b6826ae</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>

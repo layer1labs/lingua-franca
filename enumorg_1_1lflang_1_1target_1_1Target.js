@@ -26,6 +26,7 @@ var enumorg_1_1lflang_1_1target_1_1Target =
     [ "ALL", "enumorg_1_1lflang_1_1target_1_1Target.html#a21ca728af85a52046029a4c3a015ac89", null ],
     [ "C", "enumorg_1_1lflang_1_1target_1_1Target.html#ab0752bfa65983dbaef56bde9b037d9be", null ],
     [ "CCPP", "enumorg_1_1lflang_1_1target_1_1Target.html#af67769ff82aad1868ac2f1dfce27558c", null ],
+    [ "Chrono", "enumorg_1_1lflang_1_1target_1_1Target.html#a31fdd8d3683991c37d504e9d9b8c439c", null ],
     [ "CPP", "enumorg_1_1lflang_1_1target_1_1Target.html#a4aeea177497099be0b6795577488642a", null ],
     [ "Polyglot", "enumorg_1_1lflang_1_1target_1_1Target.html#ad9ebe7bbe660a79d481464ed97c4d357", null ],
     [ "Python", "enumorg_1_1lflang_1_1target_1_1Target.html#a82a66f8f4b5c432cac502108e46bf6e2", null ],

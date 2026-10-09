@@ -22,7 +22,8 @@ var hierarchy =
     ] ],
     [ "AbstractLFValidator", null, [
       [ "org.lflang.generator.GeneratorBase", "classorg_1_1lflang_1_1generator_1_1GeneratorBase.html", [
-        [ "org.lflang.analyses.uclid.UclidGenerator", "classorg_1_1lflang_1_1analyses_1_1uclid_1_1UclidGenerator.html", null ]
+        [ "org.lflang.analyses.uclid.UclidGenerator", "classorg_1_1lflang_1_1analyses_1_1uclid_1_1UclidGenerator.html", null ],
+        [ "org.lflang.generator.chrono.ChronoGenerator", "classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html", null ]
       ] ],
       [ "org.lflang.validation.BaseLFValidator", "classorg_1_1lflang_1_1validation_1_1BaseLFValidator.html", [
         [ "org.lflang.validation.LFValidator", "classorg_1_1lflang_1_1validation_1_1LFValidator.html", null ]
@@ -308,7 +309,8 @@ var hierarchy =
       [ "org.lflang.federated.generator.FederationFileConfig", "classorg_1_1lflang_1_1federated_1_1generator_1_1FederationFileConfig.html", null ],
       [ "org.lflang.generator.c.CFileConfig", "classorg_1_1lflang_1_1generator_1_1c_1_1CFileConfig.html", [
         [ "org.lflang.generator.python.PyFileConfig", "classorg_1_1lflang_1_1generator_1_1python_1_1PyFileConfig.html", null ]
-      ] ]
+      ] ],
+      [ "org.lflang.generator.chrono.ChronoFileConfig", "classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoFileConfig.html", null ]
     ] ],
     [ "org.lflang.generator.Argument&lt; T &gt;", "classorg_1_1lflang_1_1generator_1_1Argument.html", null ],
     [ "org.lflang.generator.c.CActionGenerator", "classorg_1_1lflang_1_1generator_1_1c_1_1CActionGenerator.html", null ],
@@ -343,6 +345,7 @@ var hierarchy =
     [ "org.lflang.generator.c.CWatchdogGenerator", "classorg_1_1lflang_1_1generator_1_1c_1_1CWatchdogGenerator.html", null ],
     [ "org.lflang.generator.c.InteractingContainedReactors", "classorg_1_1lflang_1_1generator_1_1c_1_1InteractingContainedReactors.html", null ],
     [ "org.lflang.generator.c.TypeParameterizedReactor", "classorg_1_1lflang_1_1generator_1_1c_1_1TypeParameterizedReactor.html", null ],
+    [ "org.lflang.generator.chrono.ChronoModelJson", "classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html", null ],
     [ "org.lflang.generator.CodeBuilder", "classorg_1_1lflang_1_1generator_1_1CodeBuilder.html", null ],
     [ "org.lflang.generator.CodeMap", "classorg_1_1lflang_1_1generator_1_1CodeMap.html", null ],
     [ "org.lflang.generator.CodeMap.Correspondence", "classorg_1_1lflang_1_1generator_1_1CodeMap_1_1Correspondence.html", null ],
@@ -484,6 +487,9 @@ var hierarchy =
     [ "org.lflang.target.property.ClockSyncOptionsProperty.ClockSyncOptions", "classorg_1_1lflang_1_1target_1_1property_1_1ClockSyncOptionsProperty_1_1ClockSyncOptions.html", null ],
     [ "org.lflang.target.property.CoordinationOptionsProperty.CoordinationOptions", "classorg_1_1lflang_1_1target_1_1property_1_1CoordinationOptionsProperty_1_1CoordinationOptions.html", null ],
     [ "org.lflang.target.property.TargetProperty&lt; T, S extends TargetPropertyType &gt;", "classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html", null ],
+    [ "org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;", "classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html", [
+      [ "org.lflang.target.property.BindingProfileProperty", "classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html", null ]
+    ] ],
     [ "org.lflang.target.property.TargetProperty&lt; Boolean, PrimitiveType &gt;", "classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html", [
       [ "org.lflang.target.property.BooleanProperty", "classorg_1_1lflang_1_1target_1_1property_1_1BooleanProperty.html", [
         [ "org.lflang.target.property.AuthProperty", "classorg_1_1lflang_1_1target_1_1property_1_1AuthProperty.html", null ],
@@ -565,6 +571,7 @@ var hierarchy =
     [ "org.lflang.target.property.TargetProperty&lt; String, PrimitiveType &gt;", "classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html", [
       [ "org.lflang.target.property.FedSetupProperty", "classorg_1_1lflang_1_1target_1_1property_1_1FedSetupProperty.html", null ],
       [ "org.lflang.target.property.StringProperty", "classorg_1_1lflang_1_1target_1_1property_1_1StringProperty.html", [
+        [ "org.lflang.target.property.ChronoCapacitiesProperty", "classorg_1_1lflang_1_1target_1_1property_1_1ChronoCapacitiesProperty.html", null ],
         [ "org.lflang.target.property.CompilerProperty", "classorg_1_1lflang_1_1target_1_1property_1_1CompilerProperty.html", null ],
         [ "org.lflang.target.property.ExternalRuntimePathProperty", "classorg_1_1lflang_1_1target_1_1property_1_1ExternalRuntimePathProperty.html", null ],
         [ "org.lflang.target.property.PythonVersionProperty", "classorg_1_1lflang_1_1target_1_1property_1_1PythonVersionProperty.html", null ],
@@ -583,6 +590,7 @@ var hierarchy =
     ] ],
     [ "org.lflang.target.property.TracePluginProperty.TracePluginSpec", "classorg_1_1lflang_1_1target_1_1property_1_1TracePluginProperty_1_1TracePluginSpec.html", null ],
     [ "org.lflang.target.property.TracingProperty.TracingOptions", "classorg_1_1lflang_1_1target_1_1property_1_1TracingProperty_1_1TracingOptions.html", null ],
+    [ "org.lflang.target.property.type.BindingProfileType.BindingProfile", "enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html", null ],
     [ "org.lflang.target.property.type.BuildTypeType.BuildType", "enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BuildTypeType_1_1BuildType.html", null ],
     [ "org.lflang.target.property.type.ClockSyncModeType.ClockSyncMode", "enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1ClockSyncModeType_1_1ClockSyncMode.html", null ],
     [ "org.lflang.target.property.type.CommunicationModeType.CommunicationMode", "enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1CommunicationModeType_1_1CommunicationMode.html", null ],
@@ -597,6 +605,9 @@ var hierarchy =
       [ "org.lflang.target.property.TracingProperty.TracingOption", "enumorg_1_1lflang_1_1target_1_1property_1_1TracingProperty_1_1TracingOption.html", null ]
     ] ],
     [ "org.lflang.target.property.type.LoggingType.LogLevel", "enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1LoggingType_1_1LogLevel.html", null ],
+    [ "org.lflang.target.property.type.OptionsType&lt; BindingProfile &gt;", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html", [
+      [ "org.lflang.target.property.type.BindingProfileType", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType.html", null ]
+    ] ],
     [ "org.lflang.target.property.type.OptionsType&lt; BuildType &gt;", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html", [
       [ "org.lflang.target.property.type.BuildTypeType", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BuildTypeType.html", null ]
     ] ],

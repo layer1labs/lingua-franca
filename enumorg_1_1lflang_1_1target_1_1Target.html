@@ -177,6 +177,8 @@ Static Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab0752bfa65983dbaef56bde9b037d9be" id="r_ab0752bfa65983dbaef56bde9b037d9be"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab0752bfa65983dbaef56bde9b037d9be">C</a></td></tr>
 <tr class="memitem:af67769ff82aad1868ac2f1dfce27558c" id="r_af67769ff82aad1868ac2f1dfce27558c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af67769ff82aad1868ac2f1dfce27558c">CCPP</a> =(&quot;CCpp&quot;, true, Target.C.keywords)</td></tr>
+<tr class="memitem:a31fdd8d3683991c37d504e9d9b8c439c" id="r_a31fdd8d3683991c37d504e9d9b8c439c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a31fdd8d3683991c37d504e9d9b8c439c">Chrono</a> =(&quot;Chrono&quot;, false, Target.Python.keywords)</td></tr>
+<tr class="memdesc:a31fdd8d3683991c37d504e9d9b8c439c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Chrono target (Layer1Labs ChronoHive / ChronoFabric).  <br /></td></tr>
 <tr class="memitem:a4aeea177497099be0b6795577488642a" id="r_a4aeea177497099be0b6795577488642a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4aeea177497099be0b6795577488642a">CPP</a></td></tr>
 <tr class="memitem:ad9ebe7bbe660a79d481464ed97c4d357" id="r_ad9ebe7bbe660a79d481464ed97c4d357"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad9ebe7bbe660a79d481464ed97c4d357">Polyglot</a> =(&quot;Polyglot&quot;, false, Collections.emptyList())</td></tr>
 <tr class="memdesc:ad9ebe7bbe660a79d481464ed97c4d357"><td class="mdescLeft">&#160;</td><td class="mdescRight">A meta-target for multi-language federated programs.  <br /></td></tr>
@@ -817,6 +819,23 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31fdd8d3683991c37d504e9d9b8c439c" name="a31fdd8d3683991c37d504e9d9b8c439c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31fdd8d3683991c37d504e9d9b8c439c">&#9670;&#160;</a></span>Chrono</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">org.lflang.target.Target.Chrono =(&quot;Chrono&quot;, false, Target.Python.keywords)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Chrono target (Layer1Labs ChronoHive / ChronoFabric). </p>
+<p>There is exactly one Chrono target: programs are lowered by the ChronoGenerator to a deterministic Constraint Specification format (CSP1) binary artifact (a single deployment artifact, .cspec) that is executed by the ChronoHive engine (software effector binding) or the ChronoFabric engine (hardware effector binding). The engines differ only in effector binding, never in language or blob semantics, so there are no per-engine target variants. Reaction bodies are written in the Python-syntax ChronoHive subset (spec 002, REQ-102/103), hence this target reuses Python's keyword set. </p>
 
 </div>
 </div>

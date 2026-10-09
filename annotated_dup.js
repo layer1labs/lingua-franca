@@ -191,6 +191,11 @@ var annotated_dup =
             [ "InteractingContainedReactors", "classorg_1_1lflang_1_1generator_1_1c_1_1InteractingContainedReactors.html", "classorg_1_1lflang_1_1generator_1_1c_1_1InteractingContainedReactors" ],
             [ "TypeParameterizedReactor", "classorg_1_1lflang_1_1generator_1_1c_1_1TypeParameterizedReactor.html", "classorg_1_1lflang_1_1generator_1_1c_1_1TypeParameterizedReactor" ]
           ] ],
+          [ "chrono", "namespaceorg_1_1lflang_1_1generator_1_1chrono.html", [
+            [ "ChronoFileConfig", "classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoFileConfig.html", "classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoFileConfig" ],
+            [ "ChronoGenerator", "classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html", "classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator" ],
+            [ "ChronoModelJson", "classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html", "classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson" ]
+          ] ],
           [ "docker", "namespaceorg_1_1lflang_1_1generator_1_1docker.html", [
             [ "CDockerGenerator", "classorg_1_1lflang_1_1generator_1_1docker_1_1CDockerGenerator.html", "classorg_1_1lflang_1_1generator_1_1docker_1_1CDockerGenerator" ],
             [ "DockerComposeGenerator", "classorg_1_1lflang_1_1generator_1_1docker_1_1DockerComposeGenerator.html", "classorg_1_1lflang_1_1generator_1_1docker_1_1DockerComposeGenerator" ],
@@ -291,6 +296,7 @@ var annotated_dup =
           [ "property", "namespaceorg_1_1lflang_1_1target_1_1property.html", [
             [ "type", "namespaceorg_1_1lflang_1_1target_1_1property_1_1type.html", [
               [ "ArrayType", "enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1ArrayType.html", "enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1ArrayType" ],
+              [ "BindingProfileType", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType.html", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType" ],
               [ "BuildTypeType", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BuildTypeType.html", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BuildTypeType" ],
               [ "ClockSyncModeType", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1ClockSyncModeType.html", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1ClockSyncModeType" ],
               [ "CommunicationModeType", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1CommunicationModeType.html", "classorg_1_1lflang_1_1target_1_1property_1_1type_1_1CommunicationModeType" ],
@@ -306,11 +312,13 @@ var annotated_dup =
               [ "UnionType", "enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1UnionType.html", "enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1UnionType" ]
             ] ],
             [ "AuthProperty", "classorg_1_1lflang_1_1target_1_1property_1_1AuthProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1AuthProperty" ],
+            [ "BindingProfileProperty", "classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty" ],
             [ "BooleanProperty", "classorg_1_1lflang_1_1target_1_1property_1_1BooleanProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1BooleanProperty" ],
             [ "BuildCommandsProperty", "classorg_1_1lflang_1_1target_1_1property_1_1BuildCommandsProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1BuildCommandsProperty" ],
             [ "BuildTypeProperty", "classorg_1_1lflang_1_1target_1_1property_1_1BuildTypeProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1BuildTypeProperty" ],
             [ "CargoDependenciesProperty", "classorg_1_1lflang_1_1target_1_1property_1_1CargoDependenciesProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1CargoDependenciesProperty" ],
             [ "CargoFeaturesProperty", "classorg_1_1lflang_1_1target_1_1property_1_1CargoFeaturesProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1CargoFeaturesProperty" ],
+            [ "ChronoCapacitiesProperty", "classorg_1_1lflang_1_1target_1_1property_1_1ChronoCapacitiesProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1ChronoCapacitiesProperty" ],
             [ "ClockSyncModeProperty", "classorg_1_1lflang_1_1target_1_1property_1_1ClockSyncModeProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1ClockSyncModeProperty" ],
             [ "ClockSyncOptionsProperty", "classorg_1_1lflang_1_1target_1_1property_1_1ClockSyncOptionsProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1ClockSyncOptionsProperty" ],
             [ "CmakeArgsProperty", "classorg_1_1lflang_1_1target_1_1property_1_1CmakeArgsProperty.html", "classorg_1_1lflang_1_1target_1_1property_1_1CmakeArgsProperty" ],

@@ -16157,6 +16157,545 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>org::lflang::generator::chrono::ChronoFileConfig</name>
+    <filename>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoFileConfig.html</filename>
+    <base>org.lflang.FileConfig</base>
+    <member kind="function">
+      <type></type>
+      <name>ChronoFileConfig</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoFileConfig.html</anchorfile>
+      <anchor>a3f27e4c4058cde172afd849db74a169f</anchor>
+      <arglist>(Resource resource, Path srcGenBasePath, boolean useHierarchicalBin)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>doClean</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a2f3cedf4124e5cc9292abc749a636c50</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>LFCommand</type>
+      <name>getCommand</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a8b0ab00d8e9aeb0526396978b46cdbff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Path</type>
+      <name>getDirectory</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a0805de9a6fdf878db785f32bf569e9e7</anchor>
+      <arglist>(Resource r)</arglist>
+    </member>
+    <member kind="function">
+      <type>Path</type>
+      <name>getExecutable</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a21438a70c07ade97df6c4eb040c78df5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Path</type>
+      <name>getModelGenBasePath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>aab302b75642dbc55010558897d90d974</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Path</type>
+      <name>getModelGenPath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>aaadd154f0fdb26cd627f67f3cbbe8112</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Path</type>
+      <name>getOutPath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>aadbddca3925f8b7ca7b77123a25dc275</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Path</type>
+      <name>getSrcGenBasePath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>ac771a84f3498f17e042f76172757d941</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Path</type>
+      <name>getSrcGenPath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>ae26b50321c8ce7d6f82079b0efbb25fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Path</type>
+      <name>getSrcGenPkgPath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a13a4ed53a8ac5a2dd38fd8585a7fffff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Path</type>
+      <name>findPackageRoot</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a1f4440a73ce696b26daf6f8837981a00</anchor>
+      <arglist>(final Path input, final Consumer&lt; String &gt; printWarning)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Resource</type>
+      <name>getResource</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>aa607ba3c51d2917175d4e50d713d7273</anchor>
+      <arglist>(File file, Provider&lt; ResourceSet &gt; resourceSetProvider)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Resource</type>
+      <name>getResource</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a90959c68962e8603088ffd34739ecdbd</anchor>
+      <arglist>(Path path, XtextResourceSet xtextResourceSet)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Path</type>
+      <name>getSrcGenRoot</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a7fa5856208463eb1d79a283ac2a09d63</anchor>
+      <arglist>(IFileSystemAccess2 fsa)</arglist>
+    </member>
+    <member kind="variable">
+      <type>final Path</type>
+      <name>binPath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>aa9e8742b0a791cc329eb06368a027f92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>final IResource</type>
+      <name>iResource</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a819b6b0f2489fca2b79521f8d2dbb850</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>final String</type>
+      <name>name</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a826734253724b14eab96b52238ce03f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>final Resource</type>
+      <name>resource</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a6ae8ffe20be19509655e2f39e8a0dae3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>final Path</type>
+      <name>srcFile</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a99e7606f0d8f9dc7d27f6f7394a2097e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>final Path</type>
+      <name>srcPath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>abd8fa0fe4c6d554309bd1aa576b8b65a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>final Path</type>
+      <name>srcPkgPath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a9873c33b25d6a3e668d96d1068a6dd8a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>final boolean</type>
+      <name>useHierarchicalBin</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>ac86a63029d65b24543f6ed15a4cc1423</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static final String</type>
+      <name>DEFAULT_BIN_DIR</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a6f81faca9bbf6ea82f4c9aa900a63943</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static final String</type>
+      <name>DEFAULT_MODEL_GEN_DIR</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>ac5cb1fc2714e098bcaed2f4364eb3851</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static final String</type>
+      <name>DEFAULT_SRC_DIR</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a8366f237b17ebf31b70104132fdc4e74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static final String</type>
+      <name>DEFAULT_SRC_GEN_DIR</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a89fcf5c51736e2119dd38727dea7467a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>String</type>
+      <name>getExecutableExtension</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>affa820120da34808619727af21612fd8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Path</type>
+      <name>getSubPkgPath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>aae6b918b653bb024955b75d657b7c0ff</anchor>
+      <arglist>(Path srcPath)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Path</type>
+      <name>modelGenBasePath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>ada9e29269897795f6441df88fdd42171</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Path</type>
+      <name>modelGenPath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>ae987c0a32474fbb3c9befce8ee22668d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Path</type>
+      <name>srcGenBasePath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>acea22dc46408617ec61f514a417ca272</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Path</type>
+      <name>srcGenPath</name>
+      <anchorfile>classorg_1_1lflang_1_1FileConfig.html</anchorfile>
+      <anchor>a03061541a3ca5a3d3b6ede39f9c122c5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>org::lflang::generator::chrono::ChronoGenerator</name>
+    <filename>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</filename>
+    <base>org.lflang.generator.GeneratorBase</base>
+    <member kind="function">
+      <type></type>
+      <name>ChronoGenerator</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</anchorfile>
+      <anchor>ae7d618fcba6f8637f3ba383274c3ff7b</anchor>
+      <arglist>(LFGeneratorContext context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>doGenerate</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</anchorfile>
+      <anchor>a33c8f72e160abff1734464003d88adde</anchor>
+      <arglist>(Resource resource, LFGeneratorContext context)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>errorsOccurred</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a4bfcd2402734c85e95a48adec2469ecd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>GeneratorCommandFactory</type>
+      <name>getCommandFactory</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a9b51c74f19faa0824615a88441fcec9f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Instantiation</type>
+      <name>getMainDef</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a336488d0091b4ac7209758abf7ab0290</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getReactionBankIndex</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a467957ed9c6c738b60bccdb0b97f1004</anchor>
+      <arglist>(Reaction reaction)</arglist>
+    </member>
+    <member kind="function">
+      <type>Target</type>
+      <name>getTarget</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</anchorfile>
+      <anchor>a5443e234724649207c575849659a3df1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>TargetConfig</type>
+      <name>getTargetConfig</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a5e78d5eb676f985a18d026030728e623</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>TargetTypes</type>
+      <name>getTargetTypes</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</anchorfile>
+      <anchor>a66c160ff028ea3110a5a67c7bf5e715a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>printInfo</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>aefc1b3ca1f8d97f8698e6fbe3165f720</anchor>
+      <arglist>(LFGeneratorContext context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reportCommandErrors</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>aaeb55fee83eaf9360d71dcd8f943ab40</anchor>
+      <arglist>(String stderr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setReactionBankIndex</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a377eb5ed8dcd6bb63316f5f6de1a63bc</anchor>
+      <arglist>(Reaction reaction, int bankIndex)</arglist>
+    </member>
+    <member kind="variable">
+      <type>final LFGeneratorContext</type>
+      <name>context</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a5d8b3a0c17a0d139e2c6e9ef8dff5f7b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>boolean</type>
+      <name>hasModalReactors</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>abbc8eb791ff878c8a4c2455317bc2356</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>boolean</type>
+      <name>hasWatchdogs</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a16ad311724fcd9a9c3fe518e1c3867ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ReactorInstance</type>
+      <name>main</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a15120128a9146cf649a0defbf050e0b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>MessageReporter</type>
+      <name>messageReporter</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a667b3435299a11670e38d5446144ad89</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static final String</type>
+      <name>CHRONOC_VERSION</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</anchorfile>
+      <anchor>a9a7b6a44136af0ba5ba711e71bb2b03f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static final long</type>
+      <name>DEPTH_BW</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</anchorfile>
+      <anchor>aeb35be33dbd5f277a995d8029e8d4431</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static final long</type>
+      <name>MB_BW</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</anchorfile>
+      <anchor>a970bca16b8a9da94daf429a8c22d9a3d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>additionalPostProcessingForModes</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a3471e4881e3f2ac3c90d67f04250f38e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>boolean</type>
+      <name>buildUsingDocker</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>afb0e93b376214115893f8482add44d02</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>checkModalReactorSupport</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a9fa510d65403927b6d5b3bac927a02b6</anchor>
+      <arglist>(boolean isSupported)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>checkWatchdogSupport</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a64c3e94a38cac0ce103d2e264c83db27</anchor>
+      <arglist>(boolean isSupported)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>cleanIfNeeded</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>aaa20bf0994f7162a7be5476a3a2de1f0</anchor>
+      <arglist>(LFGeneratorContext context)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>copyUserFiles</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a6db28beb3f6ffb5ba51f2570f15474cb</anchor>
+      <arglist>(TargetConfig targetConfig, FileConfig fileConfig)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>createMainInstantiation</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a99817f623739bf8840acc2c2f12f4351</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>String</type>
+      <name>getConflictingConnectionsInModalReactorsBody</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>aaba754fe24422d5beaafbd3fb2ca0259</anchor>
+      <arglist>(VarRef source, VarRef dest)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>DockerGenerator</type>
+      <name>getDockerGenerator</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoGenerator.html</anchorfile>
+      <anchor>adee9e7c7bc0a98ac599631a3597c2372</anchor>
+      <arglist>(LFGeneratorContext context)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>ErrorFileAndLine</type>
+      <name>parseCommandOutput</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>ac93f5e61a886e94ad600f4ddd1532b50</anchor>
+      <arglist>(String line)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>registerTransformation</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a2e38efc5be65b8ce39fa751caeecb2d7</anchor>
+      <arglist>(AstTransformation transformation)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setReactorsAndInstantiationGraph</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a651b7331a0a87503d0f674f8d9ea182e</anchor>
+      <arglist>(LFGeneratorContext.Mode mode)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>GeneratorCommandFactory</type>
+      <name>commandFactory</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a4bfacb8fb4e80bb444d1c1ff4fb773b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>InstantiationGraph</type>
+      <name>instantiationGraph</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a6c4bab272ae039836ea92bfff851fc8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Instantiation</type>
+      <name>mainDef</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a596a9538e19ceca48377bfa7e6279ce9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Map&lt; Reaction, Integer &gt;</type>
+      <name>reactionBankIndices</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>aaba9f3fc436a133cd61a140967e73706</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>List&lt; Reactor &gt;</type>
+      <name>reactors</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>adf20e0d64aa14fda544445708d6fdf51</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>final TargetConfig</type>
+      <name>targetConfig</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1GeneratorBase.html</anchorfile>
+      <anchor>a3b9c60edb15a9b1584a07732bb7c5e65</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>org::lflang::generator::chrono::ChronoModelJson</name>
+    <filename>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html</filename>
+    <member kind="function" protection="package" static="yes">
+      <type>static String</type>
+      <name>esc</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html</anchorfile>
+      <anchor>a1317df49cd04ff5b2e067bbf59992ae9</anchor>
+      <arglist>(String s)</arglist>
+    </member>
+    <member kind="function" protection="package" static="yes">
+      <type>static String</type>
+      <name>pairs</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html</anchorfile>
+      <anchor>a3b5f4687e6bebce280131dbafda5f8a8</anchor>
+      <arglist>(List&lt; Map.Entry&lt; String, Long &gt; &gt; xs)</arglist>
+    </member>
+    <member kind="function" protection="package" static="yes">
+      <type>static String</type>
+      <name>str</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html</anchorfile>
+      <anchor>abde4777f4c76ab754f9abe930f2fee4d</anchor>
+      <arglist>(String s)</arglist>
+    </member>
+    <member kind="function" protection="package" static="yes">
+      <type>static String</type>
+      <name>strList</name>
+      <anchorfile>classorg_1_1lflang_1_1generator_1_1chrono_1_1ChronoModelJson.html</anchorfile>
+      <anchor>afbd068427c7a09d356d9ba8511615033</anchor>
+      <arglist>(List&lt; String &gt; xs)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>org::lflang::generator::CodeBuilder</name>
     <filename>classorg_1_1lflang_1_1generator_1_1CodeBuilder.html</filename>
     <member kind="function">
@@ -26811,6 +27350,151 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>org::lflang::target::property::BindingProfileProperty</name>
+    <filename>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</filename>
+    <base>org.lflang.target.property.TargetProperty&lt; BindingProfile, BindingProfileType &gt;</base>
+    <member kind="function">
+      <type>Optional&lt; Element &gt;</type>
+      <name>astElementFromConfig</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a6a5c01889646675b2403aba03a9561b1</anchor>
+      <arglist>(TargetConfig config)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>checkType</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>ad2943097a2b239aecb9c0bf4eb2968f6</anchor>
+      <arglist>(KeyValuePair pair, MessageReporter reporter)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>equals</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a204b717061ca87ddd71cbc866440af5c</anchor>
+      <arglist>(Object obj)</arglist>
+    </member>
+    <member kind="function">
+      <type>BindingProfile</type>
+      <name>fromAst</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</anchorfile>
+      <anchor>a178d7ef134c63fa7d13b4c837854571a</anchor>
+      <arglist>(Element node, MessageReporter reporter)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>hashCode</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a29acc44b1e353f4638f22bb3289d7338</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>BindingProfile</type>
+      <name>initialValue</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</anchorfile>
+      <anchor>a950343e78edfd14cd334b80134b23c71</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>loadFromFederate</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a887afc08ede48190976f784b8769b7ea</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>loadFromFederation</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a033370849eef3120afd46c4845863e2d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>loadFromImport</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>ab53684f78f96af96841c92187f131488</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>String</type>
+      <name>name</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</anchorfile>
+      <anchor>ab4a49716ac1c288225be363dd78fb57f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>final void</type>
+      <name>override</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a2a3ae8487cf2df37b7e3c98a9d594685</anchor>
+      <arglist>(TargetConfig config, T value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Element</type>
+      <name>toAstElement</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</anchorfile>
+      <anchor>a5deff36be4d5971163cc623fd05c2282</anchor>
+      <arglist>(BindingProfile value)</arglist>
+    </member>
+    <member kind="function">
+      <type>abstract Element</type>
+      <name>toAstElement</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a7f6fdee8910285230340bcd7a52f3ade</anchor>
+      <arglist>(T value)</arglist>
+    </member>
+    <member kind="function">
+      <type>String</type>
+      <name>toString</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a80cded89b1d2808e307cd4b9991f887b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a74548a3778514c9c3757ee031dae825c</anchor>
+      <arglist>(TargetConfig config, T value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>validate</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a05712b0e4f6256710f969dfd27a097f3</anchor>
+      <arglist>(TargetConfig config, MessageReporter reporter)</arglist>
+    </member>
+    <member kind="variable">
+      <type>final S</type>
+      <name>type</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>ae91c05dae9df2fc924ba84e4072e2087</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static final BindingProfileProperty</type>
+      <name>INSTANCE</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</anchorfile>
+      <anchor>afc0427f04d93e0e6c9b20e54e4b61a14</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>T</type>
+      <name>fromJSON</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>ac340310011200e10f311d2fe985be828</anchor>
+      <arglist>(JsonElement element, MessageReporter reporter)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>BindingProfile</type>
+      <name>fromString</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1BindingProfileProperty.html</anchorfile>
+      <anchor>a139667943cb568aab1f8e8132fea9f57</anchor>
+      <arglist>(String string, MessageReporter reporter)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>org::lflang::target::property::BooleanProperty</name>
     <filename>classorg_1_1lflang_1_1target_1_1property_1_1BooleanProperty.html</filename>
     <base>org.lflang.target.property.TargetProperty&lt; Boolean, PrimitiveType &gt;</base>
@@ -27539,6 +28223,151 @@
       <name>fromString</name>
       <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1StringListProperty.html</anchorfile>
       <anchor>a5967d5d3b98228c0c68936535e9ad870</anchor>
+      <arglist>(String string, MessageReporter reporter)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>org::lflang::target::property::ChronoCapacitiesProperty</name>
+    <filename>classorg_1_1lflang_1_1target_1_1property_1_1ChronoCapacitiesProperty.html</filename>
+    <base>org.lflang.target.property.StringProperty</base>
+    <member kind="function">
+      <type>Optional&lt; Element &gt;</type>
+      <name>astElementFromConfig</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a6a5c01889646675b2403aba03a9561b1</anchor>
+      <arglist>(TargetConfig config)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>checkType</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>ad2943097a2b239aecb9c0bf4eb2968f6</anchor>
+      <arglist>(KeyValuePair pair, MessageReporter reporter)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>equals</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a204b717061ca87ddd71cbc866440af5c</anchor>
+      <arglist>(Object obj)</arglist>
+    </member>
+    <member kind="function">
+      <type>String</type>
+      <name>fromAst</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1StringProperty.html</anchorfile>
+      <anchor>a1399e7174c14f2293e7dbc8e9e7886cc</anchor>
+      <arglist>(Element node, MessageReporter reporter)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>hashCode</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a29acc44b1e353f4638f22bb3289d7338</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>String</type>
+      <name>initialValue</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1StringProperty.html</anchorfile>
+      <anchor>a30a818f243a7242000bac28eb3995686</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>loadFromFederate</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a887afc08ede48190976f784b8769b7ea</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>loadFromFederation</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a033370849eef3120afd46c4845863e2d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>loadFromImport</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>ab53684f78f96af96841c92187f131488</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>String</type>
+      <name>name</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1ChronoCapacitiesProperty.html</anchorfile>
+      <anchor>a8821d6d104aabedd333d8d8663b4d0dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>final void</type>
+      <name>override</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a2a3ae8487cf2df37b7e3c98a9d594685</anchor>
+      <arglist>(TargetConfig config, T value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Element</type>
+      <name>toAstElement</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1StringProperty.html</anchorfile>
+      <anchor>aa1872cfeb3dcc048cce280b8476ad978</anchor>
+      <arglist>(String value)</arglist>
+    </member>
+    <member kind="function">
+      <type>abstract Element</type>
+      <name>toAstElement</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a7f6fdee8910285230340bcd7a52f3ade</anchor>
+      <arglist>(T value)</arglist>
+    </member>
+    <member kind="function">
+      <type>String</type>
+      <name>toString</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a80cded89b1d2808e307cd4b9991f887b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a74548a3778514c9c3757ee031dae825c</anchor>
+      <arglist>(TargetConfig config, T value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>validate</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>a05712b0e4f6256710f969dfd27a097f3</anchor>
+      <arglist>(TargetConfig config, MessageReporter reporter)</arglist>
+    </member>
+    <member kind="variable">
+      <type>final S</type>
+      <name>type</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>ae91c05dae9df2fc924ba84e4072e2087</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static final ChronoCapacitiesProperty</type>
+      <name>INSTANCE</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1ChronoCapacitiesProperty.html</anchorfile>
+      <anchor>aaa462c44f6a6ada97224a23d4ec230bd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>T</type>
+      <name>fromJSON</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1TargetProperty.html</anchorfile>
+      <anchor>ac340310011200e10f311d2fe985be828</anchor>
+      <arglist>(JsonElement element, MessageReporter reporter)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>String</type>
+      <name>fromString</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1StringProperty.html</anchorfile>
+      <anchor>a3abf3f3328d85906dd4e3d4e7ee8336e</anchor>
       <arglist>(String string, MessageReporter reporter)</arglist>
     </member>
   </compound>
@@ -34373,6 +35202,93 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>org::lflang::target::property::type::BindingProfileType</name>
+    <filename>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType.html</filename>
+    <base>org.lflang.target.property.type.OptionsType&lt; BindingProfile &gt;</base>
+    <class kind="enum">org::lflang::target::property::type::BindingProfileType::BindingProfile</class>
+    <member kind="function">
+      <type>boolean</type>
+      <name>check</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</anchorfile>
+      <anchor>a50b001132a71a2e3bce54ebc9e22eb57</anchor>
+      <arglist>(Element e, String name, MessageReporter r)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>forName</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</anchorfile>
+      <anchor>a4ff3b44a960db9e5c76bc1669e2dd123</anchor>
+      <arglist>(String name)</arglist>
+    </member>
+    <member kind="function">
+      <type>final List&lt; T &gt;</type>
+      <name>optionsList</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</anchorfile>
+      <anchor>abbde7293586142994ecd1427e39fc7be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>String</type>
+      <name>optionsString</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</anchorfile>
+      <anchor>a74017325de7c0c3f7bbac83724817f5b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>String</type>
+      <name>toString</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</anchorfile>
+      <anchor>a3942bb143f9f5a359126ff5c532fcdf7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>validate</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1OptionsType.html</anchorfile>
+      <anchor>a7f6dff94cfcb7c9c66d6c2c43b6826ae</anchor>
+      <arglist>(Element e)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Class&lt; BindingProfile &gt;</type>
+      <name>enumClass</name>
+      <anchorfile>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType.html</anchorfile>
+      <anchor>aae7db3df69918c0427ffed2fa38f5ef9</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="enum">
+    <name>org::lflang::target::property::type::BindingProfileType::BindingProfile</name>
+    <filename>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html</filename>
+    <member kind="function">
+      <type>String</type>
+      <name>toString</name>
+      <anchorfile>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html</anchorfile>
+      <anchor>aaf4716d15e7e6be7783c939281435372</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static BindingProfile</type>
+      <name>getDefault</name>
+      <anchorfile>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html</anchorfile>
+      <anchor>a8833290f277e496615109f7ef65e8fac</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>FABRIC</name>
+      <anchorfile>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html</anchorfile>
+      <anchor>a1a8e8d4198e36e58266887054ca26644</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>HIVE</name>
+      <anchorfile>enumorg_1_1lflang_1_1target_1_1property_1_1type_1_1BindingProfileType_1_1BindingProfile.html</anchorfile>
+      <anchor>aeab711a07f58090e78891a03ad8608f7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>org::lflang::target::property::type::BuildTypeType</name>
     <filename>classorg_1_1lflang_1_1target_1_1property_1_1type_1_1BuildTypeType.html</filename>
     <base>org.lflang.target.property.type.OptionsType&lt; BuildType &gt;</base>
@@ -36056,6 +36972,13 @@
       <name>CCPP</name>
       <anchorfile>enumorg_1_1lflang_1_1target_1_1Target.html</anchorfile>
       <anchor>af67769ff82aad1868ac2f1dfce27558c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type></type>
+      <name>Chrono</name>
+      <anchorfile>enumorg_1_1lflang_1_1target_1_1Target.html</anchorfile>
+      <anchor>a31fdd8d3683991c37d504e9d9b8c439c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -44738,6 +45661,7 @@
     <name>org::lflang::generator</name>
     <filename>namespaceorg_1_1lflang_1_1generator.html</filename>
     <namespace>org::lflang::generator::c</namespace>
+    <namespace>org::lflang::generator::chrono</namespace>
     <namespace>org::lflang::generator::docker</namespace>
     <namespace>org::lflang::generator::python</namespace>
     <namespace>org::lflang::generator::rust</namespace>
@@ -44826,6 +45750,13 @@
     <class kind="class">org::lflang::generator::c::TypeParameterizedReactor</class>
   </compound>
   <compound kind="namespace">
+    <name>org::lflang::generator::chrono</name>
+    <filename>namespaceorg_1_1lflang_1_1generator_1_1chrono.html</filename>
+    <class kind="class">org::lflang::generator::chrono::ChronoFileConfig</class>
+    <class kind="class">org::lflang::generator::chrono::ChronoGenerator</class>
+    <class kind="class">org::lflang::generator::chrono::ChronoModelJson</class>
+  </compound>
+  <compound kind="namespace">
     <name>org::lflang::generator::docker</name>
     <filename>namespaceorg_1_1lflang_1_1generator_1_1docker.html</filename>
     <class kind="class">org::lflang::generator::docker::CDockerGenerator</class>
@@ -44904,11 +45835,13 @@
     <filename>namespaceorg_1_1lflang_1_1target_1_1property.html</filename>
     <namespace>org::lflang::target::property::type</namespace>
     <class kind="class">org::lflang::target::property::AuthProperty</class>
+    <class kind="class">org::lflang::target::property::BindingProfileProperty</class>
     <class kind="class">org::lflang::target::property::BooleanProperty</class>
     <class kind="class">org::lflang::target::property::BuildCommandsProperty</class>
     <class kind="class">org::lflang::target::property::BuildTypeProperty</class>
     <class kind="class">org::lflang::target::property::CargoDependenciesProperty</class>
     <class kind="class">org::lflang::target::property::CargoFeaturesProperty</class>
+    <class kind="class">org::lflang::target::property::ChronoCapacitiesProperty</class>
     <class kind="class">org::lflang::target::property::ClockSyncModeProperty</class>
     <class kind="class">org::lflang::target::property::ClockSyncOptionsProperty</class>
     <class kind="class">org::lflang::target::property::CmakeArgsProperty</class>
@@ -44958,6 +45891,7 @@
     <name>org::lflang::target::property::type</name>
     <filename>namespaceorg_1_1lflang_1_1target_1_1property_1_1type.html</filename>
     <class kind="enum">org::lflang::target::property::type::ArrayType</class>
+    <class kind="class">org::lflang::target::property::type::BindingProfileType</class>
     <class kind="class">org::lflang::target::property::type::BuildTypeType</class>
     <class kind="class">org::lflang::target::property::type::ClockSyncModeType</class>
     <class kind="class">org::lflang::target::property::type::CommunicationModeType</class>
@@ -45205,6 +46139,7 @@
     <class kind="class">org::lflang::generator::c::CWatchdogGenerator</class>
     <class kind="class">org::lflang::generator::c::InteractingContainedReactors</class>
     <class kind="class">org::lflang::generator::c::TypeParameterizedReactor</class>
+    <class kind="class">org::lflang::generator::chrono::ChronoFileConfig</class>
     <class kind="interface">org::lflang::generator::DelayBodyGenerator</class>
     <class kind="class">org::lflang::generator::GenerationException</class>
     <class kind="class">org::lflang::generator::GeneratorBase</class>
@@ -45503,6 +46438,14 @@
     <file>TypeParameterizedReactor.java</file>
   </compound>
   <compound kind="dir">
+    <name>/Users/runner/work/lingua-franca/lingua-franca/core/src/main/java/org/lflang/generator/chrono</name>
+    <path>/Users/runner/work/lingua-franca/lingua-franca/core/src/main/java/org/lflang/generator/chrono/</path>
+    <filename>dir_5affa8eca6187c749bc3bbe73ef22f32.html</filename>
+    <file>ChronoFileConfig.java</file>
+    <file>ChronoGenerator.java</file>
+    <file>ChronoModelJson.java</file>
+  </compound>
+  <compound kind="dir">
     <name>/Users/runner/work/lingua-franca/lingua-franca/cli</name>
     <path>/Users/runner/work/lingua-franca/lingua-franca/cli/</path>
     <filename>dir_a925d90263b3fe92f2ae5dbf5c9f7490.html</filename>
@@ -45682,6 +46625,7 @@
     <path>/Users/runner/work/lingua-franca/lingua-franca/core/src/main/java/org/lflang/generator/</path>
     <filename>dir_e05201f745e8477455462f9dd2209481.html</filename>
     <dir>/Users/runner/work/lingua-franca/lingua-franca/core/src/main/java/org/lflang/generator/c</dir>
+    <dir>/Users/runner/work/lingua-franca/lingua-franca/core/src/main/java/org/lflang/generator/chrono</dir>
     <dir>/Users/runner/work/lingua-franca/lingua-franca/core/src/main/java/org/lflang/generator/docker</dir>
     <dir>/Users/runner/work/lingua-franca/lingua-franca/core/src/main/java/org/lflang/generator/python</dir>
     <dir>/Users/runner/work/lingua-franca/lingua-franca/core/src/main/java/org/lflang/generator/rust</dir>
@@ -46147,11 +47091,13 @@
     <filename>dir_53503e9a16b073d24f84a4855a366cd2.html</filename>
     <dir>/Users/runner/work/lingua-franca/lingua-franca/core/src/main/java/org/lflang/target/property/type</dir>
     <file>AuthProperty.java</file>
+    <file>BindingProfileProperty.java</file>
     <file>BooleanProperty.java</file>
     <file>BuildCommandsProperty.java</file>
     <file>BuildTypeProperty.java</file>
     <file>CargoDependenciesProperty.java</file>
     <file>CargoFeaturesProperty.java</file>
+    <file>ChronoCapacitiesProperty.java</file>
     <file>ClockSyncModeProperty.java</file>
     <file>ClockSyncOptionsProperty.java</file>
     <file>CmakeArgsProperty.java</file>
@@ -46450,6 +47396,7 @@
     <path>/Users/runner/work/lingua-franca/lingua-franca/core/src/main/java/org/lflang/target/property/type/</path>
     <filename>dir_94cce52afbea33bf96ae4e83b3a22300.html</filename>
     <file>ArrayType.java</file>
+    <file>BindingProfileType.java</file>
     <file>BuildTypeType.java</file>
     <file>ClockSyncModeType.java</file>
     <file>CommunicationModeType.java</file>
