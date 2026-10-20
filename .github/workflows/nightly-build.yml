@@ -32,7 +32,11 @@ jobs:
           ./gradlew assemble -Pnightly=$TIMESTAMP -PtargetOS=MacOS -PtargetArch=x86_64
           ./gradlew assemble -Pnightly=$TIMESTAMP -PtargetOS=MacOS -PtargetArch=aarch64
           ./gradlew assemble -Pnightly=$TIMESTAMP -PtargetOS=Windows -PtargetArch=x86_64
+      # Only the upstream repository publishes nightly releases: it owns the
+      # NIGHTLY_BUILD token this step needs. Forks skip the step so their
+      # nightly build result reflects the build itself, not a missing secret.
       - name: Deploy nightly release
+        if: github.repository == 'lf-lang/lingua-franca'
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.NIGHTLY_BUILD }}"
