@@ -1,0 +1,55 @@
+name: Build lfc pin artifact
+
+# Builds the Chrono-aware lfc from this fork and uploads the built
+# distribution as a workflow artifact, so the binary can be pinned
+# by hash (ChronoHive ADR-018, following the ADR-010 pin pattern).
+# The sandbox where the Chrono target was developed cannot run
+# Gradle (daemon IPC failure, see chrono-proof/PROOF-OUTPUTS.md),
+# so the pinned binary is built here, on a clean GitHub-hosted
+# machine. Manual dispatch only; builds exactly the ref it is
+# dispatched on.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-lfc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out lingua-franca
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build lfc (root assemble installs build/install/lf-cli)
+        run: ./gradlew assemble --console=plain
+
+      - name: Package the built lfc distribution
+        run: |
+          SHORT=$(git rev-parse --short=12 HEAD)
+          tar -czf "lf-cli-chrono-${SHORT}.tar.gz" -C build/install lf-cli
+          sha256sum "lf-cli-chrono-${SHORT}.tar.gz" | tee lf-cli-chrono.sha256
+          build/install/lf-cli/bin/lfc --version | tee lfc-version.txt
+          git rev-parse HEAD | tee lfc-source-commit.txt
+
+      - name: Upload the pinned lfc artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lf-cli-chrono
+          path: |
+            lf-cli-chrono-*.tar.gz
+            lf-cli-chrono.sha256
+            lfc-version.txt
+            lfc-source-commit.txt
+          retention-days: 90
